@@ -1,5 +1,7 @@
 
-
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 p{
     border-style: dashed;
     padding: 1rem 1rem;
@@ -9,6 +11,33 @@ p{
     
    
 }
+.popup {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  /* The actual popup */
+  
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+    margin-top: 10px;
+  }
+  
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
 
 
 h3{
