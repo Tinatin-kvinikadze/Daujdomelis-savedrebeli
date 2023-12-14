@@ -244,8 +244,9 @@ ul{
 }
 
 .savedrebeli {
-    font-size: 18px;
+    font-size: 20px;
     display: flex; 
+    flex-wrap: wrap;
     text-decoration: none;
     padding: 1rem;
     color:black;
