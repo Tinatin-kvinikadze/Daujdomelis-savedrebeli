@@ -243,17 +243,24 @@ ul{
     background-color: #c42323;
 }
 
-.savedrebeli{
-    /* padding-left: 2rem; */
-    font-size: 50%;
+.savedrebeli {
+    font-size: 18px;
     display: flex; 
     text-decoration: none;
-    /* padding-top: 0.5rem; */
     padding: 1rem;
     color:black;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: underline;
-    
-    
+    margin:1rem;
+    border-width: 0.1rem;
+    background-color: #394a834b;
 }
+.savedrebeli:hover{
+    background-color: #d8aed5;
+}
+.arrow{
+    display: flex;
+    height:30px;
+}
+
 
