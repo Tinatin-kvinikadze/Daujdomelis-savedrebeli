@@ -242,3 +242,18 @@ ul{
 .accordion .accordion-button::focus{
     background-color: #c42323;
 }
+
+.savedrebeli{
+    /* padding-left: 2rem; */
+    font-size: 50%;
+    display: flex; 
+    text-decoration: none;
+    /* padding-top: 0.5rem; */
+    padding: 1rem;
+    color:black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    
+    
+}
+
