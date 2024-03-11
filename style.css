@@ -272,3 +272,26 @@ ul{
 }
 
 
+#countLabel {
+    display:block;
+    text-align: center;
+    font-size:2em;
+    font-family: helvetica;
+}
+
+#btnContainer {
+    text-align: center;
+}
+
+.buttons{
+    padding: 10px 20px;
+    font-size:1.3em;
+    color:#fff;
+    background-color: #ec46acba;
+    border-radius: 5px;
+    transition: background-color 0.25s;
+}
+
+.buttons:hover{
+    background-color: #ac056cdd;
+}
