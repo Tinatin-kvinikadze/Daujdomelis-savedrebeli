@@ -405,6 +405,21 @@ form button:hover {
     color: #59458f;
     /* text-decoration: dotted underline rgb(19, 31, 66); */
 }
+.arrow2{
+    display: flex;
+    justify-content: flex-start;
+    margin:20px;
+    margin-left: 21px;
+}
+.arrow3{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin:10px;
+    width:30px;
+    height:30px;
+
+}
 .star{
     width:32px;
    
@@ -414,7 +429,8 @@ form button:hover {
     
     text-align: center;
     text-decoration: none;
-    margin:30px;
+    margin:20px;
+    margin-top:5px
 }
 
 .troparni{
