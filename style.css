@@ -395,4 +395,99 @@ form button:hover {
     transform: translateX(10rem);
     opacity: 0;
 }
+.sagamo{
+    text-align: center;
+    text-decoration: none;
+    margin-bottom:20px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: #59458f;
+    text-decoration: dotted underline rgb(63, 50, 50);
+}
+.star{
+    width:32px;
+    margin:5px;
+}
 
+.dasawyisi{
+    
+    text-align: center;
+    text-decoration: none;
+    margin:30px;
+}
+
+.troparni{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
+.makari{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
+.uflisa{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
+
+.suliwminda{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
+
+.locva{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
+
+.angelosis{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
+
+.kondaki{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
+
+.jvarisadmi{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+}
+
+.calke{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
+
+
+.locva2{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
+
+.bolo{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+
+}
