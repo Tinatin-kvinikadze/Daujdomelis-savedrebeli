@@ -405,6 +405,18 @@ form button:hover {
     color: #59458f;
     /* text-decoration: dotted underline rgb(19, 31, 66); */
 }
+
+.fsalmuni{
+    text-align: center;
+    text-decoration: none;
+    margin-bottom:20px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: #59458f;
+    text-decoration: underline;
+
+}
 .arrow2{
     display: flex;
     justify-content: flex-start;
@@ -418,6 +430,13 @@ form button:hover {
     margin:10px;
     width:30px;
     height:30px;
+
+}
+.increase,
+.decrease{
+    margin-left:20px;
+    font-size: 20px;
+    cursor: pointer;
 
 }
 .star{
