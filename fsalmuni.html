@@ -13,6 +13,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="index.html"><img height ="40" width="40" class="arrow3" src="arrow.png"></a> 
     <p>
         3. ფსალმუნი დავითისი, რაჟამს ივლტოდა იგი პირისაგან აბესალომისა, ძისა თვისისა<br><br>
 1. უფალო, რად განმრავლდეს მაჭირვებელნი ჩემნი? და მრავალნი აღსდგეს ჩემ ზედა. 2. მრავალთა ჰრქვიან სულსა ჩემსა: არა არს ცხორებაი მისი ღმრთისა მიერ მისისა. 3. ხოლო შენ, უფალო, მწე ჩემდა ხარ, დიდება ჩემდა და ასამაღლებელ თავისა ჩემისა. 4. ხმითა ჩემითა უფლისა მიმართ ღაღად-ვჰყავ და შეესმა ჩემი მთით წმიდით მისით. 5. მე დავწევ და დავიძინე და განვიღვიძე, რამეთუ უფალი მწე მეყო მე. 6. არა შემეშინოს მე ბევრეულისაგან ერისა, რომელთა-იგი გარემომიცვეს მე. 7. აღსდეგ, უფალო, მაცხოვნე მე, ღმერთო ჩემო, რამეთუ შენ დასცენ ყოველნი, რომელნი მემტერნეს მე ამაოდ; კბილნი ცოდვილთანი შენ შეჰმუსრენ. 8. უფლისაი არს ცხორებაი და ერსა შენსა ზედა არს კურთხევაი შენი. დიდებაი.<br><br>
@@ -32,5 +33,30 @@
 
 
 
+    <a href="index.html"><img height ="40" width="40" class="arrow3" src="arrow.png"></a> 
 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Up</button>
+
+                                        <a href="index.html"><img height ="40" widht="40" class="arrow2" src="arrow.png"></a>
+                                        <script>
+                                            // Get the button
+                                            let mybutton = document.getElementById("myBtn");
+                                            
+                                            // When the user scrolls down 20px from the top of the document, show the button
+                                            window.onscroll = function() {scrollFunction()};
+                                            
+                                            function scrollFunction() {
+                                              if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                                                mybutton.style.display = "block";
+                                              } else {
+                                                mybutton.style.display = "none";
+                                              }
+                                            }
+                                            
+                                            // When the user clicks on the button, scroll to the top of the document
+                                            function topFunction() {
+                                              document.body.scrollTop = 0;
+                                              document.documentElement.scrollTop = 0;
+                                            }
+                                            </script>
 </body>
