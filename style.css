@@ -423,6 +423,15 @@ form button:hover {
     margin:20px;
     margin-left: 21px;
 }
+.arrow4{
+    display: flex;
+    justify-content: flex-end;
+    margin:20px;
+    margin-left: 330px;
+    margin-top:-60px;
+   
+
+}
 .arrow3{
     display: flex;
     justify-content: flex-start;
