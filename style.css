@@ -402,7 +402,8 @@ form button:hover {
     display: flex;
     justify-content: center;
     font-size: 25px;
-    color: #59458f;
+    color: #2e0057;
+    text-decoration: underline 1px;
     /* text-decoration: dotted underline rgb(19, 31, 66); */
 }
 
@@ -413,8 +414,8 @@ form button:hover {
     display: flex;
     justify-content: center;
     font-size: 25px;
-    color: #59458f;
-    text-decoration: underline;
+    color: #2e0057;
+    text-decoration: underline 1px;
 
 }
 .arrow2{
@@ -427,8 +428,8 @@ form button:hover {
     display: flex;
     justify-content: flex-end;
     margin:20px;
-    margin-left: 230px;
-    margin-top:-60px;
+    margin-left: 130px;
+    margin-top:-58px;
    
 
 }
