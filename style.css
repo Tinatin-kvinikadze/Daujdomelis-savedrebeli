@@ -422,14 +422,14 @@ form button:hover {
     display: flex;
     justify-content: flex-start;
     margin:20px;
-    margin-left: 21px;
+    margin-left: 80px;
 }
 .arrow4{
     display: flex;
     justify-content: flex-end;
     margin:20px;
-    margin-left: 130px;
-    margin-top:-58px;
+    margin-left: 140px;
+    margin-top:-57px;
    
 
 }
