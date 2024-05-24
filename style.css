@@ -427,7 +427,7 @@ form button:hover {
     display: flex;
     justify-content: flex-end;
     margin:20px;
-    margin-left: 330px;
+    margin-left: 230px;
     margin-top:-60px;
    
 
@@ -507,6 +507,15 @@ form button:hover {
     margin:20px;
 
 }
+
+.shvilta{
+    text-align: center;
+    text-decoration: none;
+    margin:20px;
+}
+
+
+
 
 .jvarisadmi{
     text-align: center;
