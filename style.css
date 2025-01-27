@@ -404,6 +404,7 @@ form button:hover {
     font-size: 20px;
     color: #ff14c0;
     text-decoration: underline 1px;
+    font-weight: 600;
     /* text-decoration: dotted underline rgb(19, 31, 66); */
 }
 
@@ -414,8 +415,9 @@ form button:hover {
     display: flex;
     justify-content: center;
     font-size: 25px;
-    color: #2e0057;
+    color: #7b1dce;
     text-decoration: underline 1px;
+    font-weight: 700;
 
 }
 .arrow2{
