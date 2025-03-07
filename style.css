@@ -6,7 +6,7 @@ p{
     border-style: dashed;
     padding: 1rem 1rem;
     border-width: 0.1rem;
-    font-size: 18px;
+    font-size: 100%;
     margin:1rem;
     
    
@@ -424,7 +424,7 @@ form button:hover {
     display: flex;
     justify-content: flex-start;
     margin:20px;
-    margin-left: 80px;
+    margin-left: 1rem 0;
 }
 .arrow4{
     display: flex;
