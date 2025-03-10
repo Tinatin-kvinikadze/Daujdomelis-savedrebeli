@@ -407,10 +407,12 @@ form button:hover {
     color: #ff14c0;
     text-decoration: underline 1px;
     font-weight: 600;
+    padding-bottom: 60px;
     /* text-decoration: dotted underline rgb(19, 31, 66); */
 }
 
 .fsalmuni{
+    padding-top: 10px;
     text-align: center;
     text-decoration: none;
     margin-bottom:20px;
