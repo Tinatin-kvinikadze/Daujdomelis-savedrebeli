@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -356,14 +356,9 @@
   <br>
 
   <a class="fsalmuni" href="fsalmuni.html">ფსალმუნნი</a>
-  <a class="sagamo" href="sagamo.php"><img width="20" height="20" src="https://img.icons8.com/office/30/spa-flower.png"
+  <a class="sagamo" href="sagamo.html"><img width="20" height="20" src="https://img.icons8.com/office/30/spa-flower.png"
       alt="spa-flower" />ძილად მისვლის ლოცვანი<img width="20" height="20"
       src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /></a>
-
-
-      <? php 
-
-
 
 
 

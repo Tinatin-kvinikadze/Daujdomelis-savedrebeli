@@ -49,7 +49,9 @@ h3{
 ul{
     line-height: 1.7;
     font-size: 20px;
+    
 }
+
 
 .ushvilota-sia{
     padding: 1rem 1rem;
@@ -128,7 +130,7 @@ ul{
     position: fixed;
  
     right: 30px;
-    bottom:30px;
+    bottom:110px;
     z-index: 99;
     font-size: 18px;
     border: none;
@@ -546,4 +548,16 @@ form button:hover {
     text-decoration: none;
     margin:20px;
 
+}
+
+
+.author{
+    padding-left:17px;
+    font-size:13px;
+    color: #cc210a;
+}
+.text{
+    font-size: 15px;
+    padding-left:17px;
+    
 }
