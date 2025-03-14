@@ -129,8 +129,8 @@ ul{
     display: none;
     position: fixed;
  
-    right: 30px;
-    bottom:110px;
+    right: 5px;
+    bottom:90px;
     z-index: 99;
     font-size: 18px;
     border: none;
@@ -138,7 +138,7 @@ ul{
     background-color: rgba(22, 5, 119, 0.808);
     color: white;
     cursor: pointer;
-    padding: 5px;
+    padding: 4px;
     border-radius: 4px;
   }
   
