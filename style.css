@@ -45,42 +45,47 @@ h3{
     padding-left: 1rem;
    
 }
+.mudmivi{
+    padding-left: 1rem;
+    font-size: 20px;
+}
 
 ul{
     line-height: 1.7;
     font-size: 20px;
+   
     
 }
 
 
 .ushvilota-sia{
     padding: 1rem 1rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     line-height: 1.6;
     font-size: 20px;
 }
 .ushvilota{
-    padding-left: 4rem;
+    padding-left: 1rem;
     font-size: 25px;
 }
 .orsulni {
-     padding-left: 4rem;
+     padding-left: 1rem;
     font-size: 25px;
 }
 .orsulta-sia {
      padding: 1rem 1rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     line-height: 1.6;
     font-size: 20px;
 }
 
 .mudmivi-sia{
-    padding-left: 4rem;
+    padding-left: 1rem;
     font-size: 25px;
 
 }
 .udzlurni{
-    padding-left: 4rem;
+    padding-left: 1rem;
     font-size: 25px;
     display: flex;
 
@@ -90,33 +95,33 @@ ul{
 
 .udzlurta-sia{
     padding: 1rem 1rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     line-height: 1.6;
     font-size: 20px;
 
 }
 
 .gansacdelshi{
-    padding-left: 3rem;
+    padding-left: 1rem;
     font-size: 25px;
 }
 
 .gansacdelshi-myofi{
     padding: 1rem 1rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     line-height: 1.6;
     font-size: 20px;
 }
 
 .daujdomlis-gogoebi{
     padding: 1rem 1rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     line-height: 1.6;
     font-size: 20px;
 
 }
 .daujdomlis{
-    padding-left: 3rem;
+    padding-left: 1rem;
     font-size: 25px;
 }
 .strongi{
