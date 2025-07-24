@@ -293,6 +293,11 @@ ul{
     font-size: 18px;
     text-decoration: none;
     color: #333;
+    border-color: #333;
+     border-width: 0.1rem;
+    border-style: dashed;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 
