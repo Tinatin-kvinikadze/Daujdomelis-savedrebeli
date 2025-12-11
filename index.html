@@ -1,400 +1,618 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./styles.css">
-  <title>Document</title>
-</head>
-
-<body>
-  <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
-          aria-expanded="false" aria-controls="flush-collapseOne">
-          ღვთისმშობლის სავედრებელი
-        </button>
-      </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">მიიღე, ყოვლადკეთილ-მოღუაწეო, ყოვლადწმიდაო დედოფალო, ესე პატიოსანი ძღვენი, შენ
-          მხოლოსათვის ჩვენ მიერ, უღირსთა მონათა შენთაგან, ყოველთაგან ნათესავთა გამორჩეულო, ყოველთაგან არსთა ზეცისათა და
-          ქვეყანისათა უმაღლესად გამოჩინებულო. ამისთვისცა ხოლო შენ მიერ იქმნა უფალი ძალთა ჩვენთანა, და შენ მიერ ძე ღვთისა
-          ვიცანთ ჩვენ, და ღირს-ვიქმნენით წმიდასა ხორცსა მისსა და პატიოსანსა სისხლსა მისსა. ამისთვისცა ნეტარ ხარ თესლითი
-          თესლამდე, ღვთივსანატრელო, ქერუბიმთა უბრწყინვალესო, სერაბიმთა უპატიოსნესო მხოლოო; და აწ, ყოვლადსაგალობელო
-          ღვთისმშობელო ქალწულო, ვედრებად
-          ჩვენ უღირსთა მონათა შენთათვის ნუ დასცხრები, რათა ვიხსნნეთ ჩვენ ყოვლისაგან ზრახვისა ბოროტისა, გარემოდგომილისა
-          ვნებისა, დავიცვნეთ უჭირველად ყოვლისაგან შემჭამელისა საბრთხისა ეშმაკთასა. არამედ ვითარმედ აღსასრულამდე
-          ვედრებითა შენითა დამიცვენ ჩვენ, რათა შენითა შუა-მდგომელობითა და შეწევნითა ცხოვნებულნი და თაყვანის-ცემასა
-          ყოველსა ზედა ყოვლისათვის სამებისა წმიდისა და ყოველთა შემოქმედისა მადლობასა აღვავლენდეთ, აწ და
-          მარადის და უკუნითი უკუნისამდე. ამინ.<br>
-          <br> <strong>* * *</strong>
-          <br>
-          ჰოი, დიდო მეუფეო, ყოვლისა მპყრობელო, მოწყალეო უფალო, იესო ქრისტე, ღმერთო ჩვენო; აჰა, ვედრებად შენდა მე, ფრიად
-          ცოდვილი, აღვსძრავ დედასა შენსა, ყოვლადუბიწოსა, ყოვლადწმიდასა დედოფალსა,
-          ქალწულსა ღვთისმშობელსა, ყოვლადმოწყალესა, ყოვლისა სოფლისა მვედრებელსა ნათესავისა ქრისტიანეთასა,
-          შენსა ჩვენდა მშობელსა ხორციელად ღვთისა ჩვენისა,
-          აურაცხელისათვის მოწყალებისა შენისა, რომელი ჩვენ ზედა ჰყავ;
-          მისითა უკუე ვედრებითა, იესო ქრისტე, ღმერთო ჩვენო, ჩემ უღირსსა ზედა დიდი მადლი და წყალობაი შენი აჩვენე და
-          მოტევებაი ცოდვათა მომმადლე მე და ღირს-მყავ მე დამკვიდრებად სასუფეველსა შენსა ყოველთა თანა წმიდათა,
-          დაუსრულებელთა საუკუნეთა უკუნისამდე. ამინ.
-
-
-          <div class="popup">
-            <span class="popuptext" id="popup">
-              <input type="button" size="16" />
-            </span>
-          </div>
-          <script>
-            let popup = document.getElementById("popup");
-
-            function closePopup() {
-              popup.classList.remove("close-popup");
-            }
-          </script>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            წმ.პანტელეიმონის სავედრებელი
-          </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">ჰოი, მკურნალო უვერცხლოო და ჩვენთა სალმობათა შემტყვებარო,
-            წმიდაო დიდმოწამეო პანტელეიმონ, ლოცვითა შენითა მსწრაფლშეწევნადითა
-            განაბრწყინვე ღვთივდაცული ერი ჩვენი და მეუფება მისი. განაძლიერე მსახურებასა
-            შინა უწმიდესი და უნეტარესი, სრულიად საქართველოს კათოლიკოს-პატრიარქი,
-            მცხეთა-თბილისის მთავარეპისკოპოსი, ბიჭვინთისა და ცხუმ-აფხაზეთის მიტროპოლიტი,
-            დიდი მეუფე, მამაი ჩვენი ილია, წმიდანი მსოფლიოს მართლმადიდებელნი პატრიარქნი,
-            ყოვლადსამღვდელონი მიტროპოლიტნი, მთავარეპისკოპოსნი და ეპისკოპოსნი.
-            მღვდელთა და დიაკონთა ღმრთისმსახურებისა სიყვარული მოჰმადლე,
-            სამონაზნოთა წესთა მაცხოვნებელი მღვიძარებაი მოანიჭე და ყოველთა მართლმადიდებელთა
-            ცხოველსმყოფელისა სიყვარულისა ბჭენი განუხვენ, რაითა სულიერსა სიმრთელესა
-            კვალადგებულნი და ღმრთისა სასუფეველსა შეწყნარებულნი ჩვენცა შენ თანა ვადიდებდეთ
-            არარაისაგან კაცთა არსად მომყვანებელსა ღმერთსა, რომლისა არს სუფევა,
-            ძალი და დიდება, მამისა და ძისა და წმიდისა სულისა, აწ და მარადის და უკუნითი უკუნისამდე. ამინ
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div> -->
-  <br>
-
-  <!-- <a  class="savedrebeli" href="asurelimama.html" >  წმ. 13 ასურელი მამის დაუჯდომელი</a> -->
-  <!--    <a  class="savedrebeli" href="abotbileli.html" >  წმ.აბო ტფილელის დაუჯდომელი</a>  -->
-<!-- <a href="itire.html" class="fsalmuni">იტირე სულო</a> -->
- <div class="savedrebeli-div">
-<b><i><a class="savedrebeli2"style="color:hsl(319, 61%, 51%);" href="gvtismshobeli.html">დაუჯდომელი ყოვლადწმიდისა ღვთისმშობელისა</a></i></b>
-</div> <br>
-<div class="savedrebeli-div">
-<b><i><a class="savedrebeli2" style="color: hsl(319, 61%, 51%);" href="panteleimoni.html">დაუჯდომელი წმ.დიდმოწამისა და მკურნალისა პანტელეიმონისა</a></b></i>
-</div>
-<!-- <div class="savedrebeli-div">
-<b><i><a class="savedrebeli2" style="color: hsl(83, 96%, 11%); font-size: 25px;" href="samasi.html">დაუჯდომელი წმიდათა სამასთა არაგველთა</a></b></i>
-</div> -->
-<br>
-  <p><strong
-      class="strongi">სავედრებელი ლოცვა</strong> <img width="20" height="20" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /><br><br>
-    მრავალმოწყალეო ღმერთო, აღმშენებელო ყოვლისაო, ხსნად ნათესავისა კაცთასა სოფლად
-    მოსულო, მოჰხედე მონათა ამათ შენსა (სახელები)....</p>
-  </section>
-  <section>
-    <h3 class="mudmivi-sia">მუდმივი სია</h3>
-    <article class="ushvilota-sia">
-      
-        <strong>დეკ.ბესარიონი</strong> <br>
-        <strong> დეკ.მიქაელი</strong> <br>
-        <strong>დეკ.შიო</strong> <br>
-        <strong> დეკ.აბრაამი</strong> <br>
-        <strong> დეკ.პანტელეიმონი</strong> <br>
-        <strong> დეკ.ნიკოლოზი(ოჯახებით)</strong> <br>
-        <strong> მონაზონი ტაისია</strong> <br>
-        <strong> ყრმა პეტრე</strong> (კესარელი)<br>
-        <strong> ანა</strong> (ჯანაშია)<br>
-        <strong> სოფიო</strong> (ტოლიაშვილი)<br>
-        <strong> ზვიადი</strong> (ქურასბედიანი)<br>
-        <strong> ბელა </strong> (ქარჩხაძე)<br>
-        <strong> გიორგი </strong> (ლალიაშვილი)<br>
-        <strong> ირინე </strong> (მამა ზაქარია)<br>
-        <strong>ლევანი </strong> (გვარიშვილი)<br>
-        <strong>ნათია </strong> (არჩვაძე)<br>
-        <strong>ლევანი </strong> (ვასაძე)<br>
-        <strong>ოთარი</strong> (ნიკოლეიშვილი)<br>
-        <strong>მართა </strong> (ტრაპაიძე)<br>
-        <strong>ანა(ციალა)</strong> (კიკაძის დედა)<br>
-        <strong>ყრმა ილია</strong> (თოფურიძე)<br>
-        <strong>ყრმა გიორგი </strong>(მამა გიორგი)<br>
-        <strong>თამარი </strong> (გაბისკირია)<br>
-        <strong>იოსები </strong> (ინგა ავალიანი)<br>
-        <strong>იოანე </strong> (გოგორიშვილი)<br>
-        <strong>ქეთევანი </strong> (ნათაძე)<br>
-        <strong>ნათია</strong> (ჯახუტაშვილი)<br>
-        <strong>დიმიტრი</strong>(გამსახურდია)<br>
-        <strong>თეიმურაზი</strong> (მელაძე)<br>
-        <strong>ელენე</strong> (შეყრილაძე)<br>
-        
-
-    </article>
-  </section>
- 
-  <h3 class="ushvilota">შვილიერებისთვის</h3>
-  <article class="ushvilota-sia">
-    <strong>მარიამ-ირაკლი </strong><br>
-    <strong>მარიამ-რატი </strong><br>
-    <strong>თამარ-თორნიკე </strong><br>
-    <strong>თამარ-ალექსანდრე </strong><br>
-    <strong>მარიამ-გიორგი </strong><br>
-    <strong>ფოტინე-დავითი </strong><br>
-    <strong>ნინო-პაატა </strong><br>
-    <strong>ია-მიხეილი </strong><br>
-    <strong>საბა-მარიამი </strong><br>
-  </article>
-
-  <h3 class="orsulni">ორსულნი</h3>
-  <article class="orsulta-sia">
-    <strong> ანა</strong><br>
-    <strong> ნინო</strong><br>
-    <strong> შორენა-მარიამი</strong><br>
-  </article>
-
-  <h3 class="udzlurni">უძლურნი</h3>
-  <article class="udzlurta-sia">
-    <strong>ზურაბი</strong> (ნ.ოლქიშვილი)<br>
-    <strong>ფლორა</strong> (ნათია)<br>
-    <strong>ყრმა გიორგი</strong><br>
-    <strong>სერაფიმა</strong>(ჯანაშიას შვილი)<br>
-    <strong>დავითი</strong>(შეყრილაძე)<br>
-    <strong>მანანა</strong>(მრევლი)<br>
-    <strong>გიორგი</strong>(ლია)<br>
-    <strong>თამაზი</strong>(ლია)<br>
-    <strong>თინათინი</strong>(დეა ჭიჭინაძის დედა)<br>
-    <strong>მარიამი</strong>(ნინო)<br>
-    <strong>მარიამი</strong>(ნინო)<br>
-    <strong>ხათუნა</strong>(შეყრილაძე)<br>
-    <strong>დავითი</strong>(შეყრილაძე)<br>
-    <strong>მარიამი(მაკო)</strong>(შორენა)<br>
-    
-
-
-
-  </article>
-  </article>
-
-
-  <h3 class="gansacdelshi">განსაცდელში მყოფნი</h3>
-  <article class="gansacdelshi-myofi">
-    <strong>გიორგი</strong><br>
-    <strong>რევაზი</strong><br>
-    <strong>დავითი</strong><br>
-    <strong>გიორგი</strong><br>
-    <strong>ლაზარე</strong><br>
-    <strong>ნიკოლოზი</strong><br>
-    <strong>მარიამი</strong><br>
-    <strong>დავითი</strong><br>
-    <strong>ნიკოლოზი</strong><br>
-    <strong>ლია და გია</strong><br>
-    <strong>ალექსანდრა</strong>(ავალიანი)<br>
-
-
-  </article>
-  <h3 class="daujdomlis">დაუჯდომლის გოგოები</h3>
-  <article class="daujdomlis-gogoebi">
-    <strong> შორენა </strong>შეყრილაძე<br>
-    <strong> ნანა</strong> ოლქიშვილი<br>
-    <strong> ირინა </strong>მენაბდე<br>
-    <strong> ხათუნა(ნინო)</strong> ნარეკლიშვილი<br>
-    <strong> ლანა(ლია) </strong>კერესელიძე<br>
-    <strong> მარიამი(მაკო)</strong>კალანდაძე<br>
-    <strong> მარიამ </strong>ბასილაძე<br>
-    <strong> მარიამ(ნათია)</strong> გოგორიშვილი<br>
-    <strong> ფოტინე(ნათია)</strong> ხუროშვილი<br>
-    <strong> ლია</strong> ბურდილაძე<br>
-    <strong> ნინო </strong>არეშიძე<br>
-    <strong> ნინო </strong>კიკაძე<br>
-    <strong> ნინო </strong>ვასაძე<br>
-    <strong> თინათინი</strong> კვინიკაძე<br>
-    <strong> ინგა(ალექსანდრა)</strong> ავალიანი<br>
-    <strong> ქეთევანი </strong>გოგუაძე<br>
-    <strong> თამარი </strong>გაბახაძე<br>
-    <strong>ანა</strong> გამსახურდია<br>
-
-  </article>
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="emojidex-emoji" src="up-chevron.png"
-      emoji-code="arrow_up" emoji-moji="⬆" alt="arrow up" width="20" height="20" /></button>
-
-
-  <script>
-    // Get the button
-    let mybutton = document.getElementById("myBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ლოცვები</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-    }
 
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
+      body {
+        font-family: "Georgia", serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+        color: #2d3748;
+        line-height: 1.8;
+      }
 
-  <h4 class="dasasruli">...... მომხმობელთა სახელსა ძისა შენისასა, განჰკურნე იგინი
-    ყოველგვარ უძლურებისა ხორცთასა და სულისა და მიუტევე მათ ყოველნი ბრალნი და ცოდვით დაცემანი,
-    განაშორე ყოველთა მდევართა, მიმომტაცებელთაგან მტერთაგან და აღადგინე
-    სარეცელსა ზედა ცოდვილისასა და სიმრთელითა სულისა და ხორცთაისა,
-    დაამკვიდრე წმინდასა საყდარსა შენსა, რაითა საქმეთაგან კეთილთა,
-    ყოველთა წმინდათა თანა, ადიდებდნენ სახელსა ძისა შენისა,
-    რამეთუ შენდა შუენის ყოველი დიდებაი, თანადაუსაბამოით
-    ძითა შენითა და სულიწმიდით აწ და მარადის და უკუნითი უკუნისამდე, ამინ. </h4>
-  <br>
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
 
-  <p><i><img width="30" height="30" src="https://img.icons8.com/?size=100&id=cpC9tCaQDyxh&format=png&color=000000"/> ღირს არსი...</i><br>
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e2e8f0;
+      }
 
-    დიდება მამასა და ძესა და წმიდასა სულსა, აწ და მარადის და უკუნითი უკუნისამდე, ამინ.<br>
-    
-    <i>უფალო, შეგვიწყალენ (3-ჯერ)</i><br>
-    
-    უფალო, იესუ ქრისტე, ძეო ღმრთისაო, ლოცვითა ყოვლად წმიდისა 
-    დედისა შენისათა, ღირსთა და ღმერთშემოსილთა მამათა ჩვენთათა და ყოველთა წმიდათა შენთათა, შეგვიწყალენ ჩვენ, ამინ.<br></p>
+      h1 {
+        color: #c53994;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-  <h4 class="dasasruli">
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" />
-    <span><strong>მოწყალებისა კარი განგვიღე</strong></span><img width="30" height="30"
-      src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /><br><br>
-    მოწყალებისა კარი განგვიღე,
-    კურთხეულო ღვთისმშობელო, რათა რომელნი ესე შენ გესავთ, არა დავეცნეთ,
-    არამედ განვერნეთ წინააღმდგომთა მტერთაგან,
-    რამეთუ შენ ხარ ცხოვრება ნათესავისა ქრისტიანეთასა. ამინ. <br>
-    <label id="countLabel">0</label><br>
-    <div id="btnContainer">
-      <button id="decreaseBtn" class="buttons">-</button>
-      <button id="resetBtn" class="buttons">წაშლა</button>
-      <button id="increaseBtn" class="buttons">+</button>
+      .subtitle {
+        color: #718096;
+        font-size: 1.1em;
+        font-style: italic;
+      }
+
+      .prayer-links {
+        display: grid;
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+
+      .prayer-link {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .prayer-link:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .section {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .section h2 {
+        color: #2d3748;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .section h2::before,
+      .section h2::after {
+        content: "✦";
+        color: #c53994;
+      }
+
+      .prayer-text {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid #c53994;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-nexts {
+        display:btn-next grid;
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+
+      .btn-next {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-next:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .names-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .name-item {
+        background: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease;
+      }
+
+      .name-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .counter-section {
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        margin: 30px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .counter-display {
+        font-size: 3em;
+        font-weight: bold;
+        color: #2d3748;
+        margin: 20px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .counter-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-next
+      {
+       padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(24, 24, 24, 0.2);
+
+      }
+
+      .btn-decrease {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+      }
+
+      .btn-reset {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+      }
+
+      .btn-increase {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .btn:active {
+        transform: scale(0.95);
+      }
+
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .scroll-top:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .psalm-text {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 10px 0;
+        border-left: 4px solid #667eea;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .flower-icon {
+        color: #c53994;
+        margin: 0 5px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 2px solid #e2e8f0;
+        color: #718096;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 2em;
+        }
+
+        .names-list {
+          grid-template-columns: 1fr;
+        }
+
+        .counter-display {
+          font-size: 2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>✦ ლოცვანი ✦</h1>
+      </header>
+
+      <div class="prayer-links">
+        <a href="gvtismshobeli.html" class="prayer-link"
+          >დაუჯდომელი ყოვლადწმიდისა ღვთისმშობელისა</a
+        >
+        <a href="panteleimoni.html" class="prayer-link"
+          >დაუჯდომელი წმ.პანტელეიმონისა</a
+        >
+      </div>
+
+      <div class="section">
+        <h2>სავედრებელი ლოცვა</h2>
+        <div class="prayer-text">
+          მრავალმოწყალეო ღმერთო, აღმშენებელო ყოვლისაო, ხსნად ნათესავისა კაცთასა
+          სოფლად მოსულო, მოჰხედე მონათა ამათ შენსა...
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>მუდმივი სია</h2>
+        <div class="names-list">
+          <div class="name-item">დეკ.ბესარიონი</div>
+          <div class="name-item">დეკ.მიქაელი</div>
+          <div class="name-item">დეკ.შიო</div>
+          <div class="name-item">დეკ.აბრაამი</div>
+          <div class="name-item">დეკ.პანტელეიმონი</div>
+          <div class="name-item">დეკ.ნიკოლოზი (ოჯახებით)</div>
+          <div class="name-item">მონაზონი ტაისია</div>
+          <div class="name-item">ყრმა პეტრე (კესარელი)</div>
+          <div class="name-item">ანა (ჯანაშია)</div>
+          <div class="name-item">სოფიო (ტოლიაშვილი)</div>
+          <div class="name-item">ზვიადი (ქურასბედიანი)</div>
+          <div class="name-item">ბელა (ქარჩხაძე)</div>
+          <div class="name-item">გიორგი (ლალიაშვილი)</div>
+          <div class="name-item">ირინე (მამა ზაქარია)</div>
+          <div class="name-item">ლევანი (გვარიშვილი)</div>
+          <div class="name-item">ნათია (არჩვაძე)</div>
+          <div class="name-item">ლევანი (ვასაძე)</div>
+          <div class="name-item">ოთარი (ნიკოლეიშვილი)</div>
+          <div class="name-item">მართა (ტრაპაიძე)</div>
+          <div class="name-item">ანა(ციალა) (კიკაძის დედა)</div>
+          <div class="name-item">ყრმა ილია (თოფურიძე)</div>
+          <div class="name-item">ყრმა გიორგი (მამა გიორგი)</div>
+          <div class="name-item">თამარი (გაბისკირია)</div>
+          <div class="name-item">იოსები (ინგა ავალიანი)</div>
+          <div class="name-item">იოანე (გოგორიშვილი)</div>
+          <div class="name-item">ქეთევანი (ნათაძე)</div>
+          <div class="name-item">ნათია (ჯახუტაშვილი)</div>
+          <div class="name-item">დიმიტრი (გამსახურდია)</div>
+          <div class="name-item">თეიმურაზი (მელაძე)</div>
+          <div class="name-item">ელენე (შეყრილაძე)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>შვილიერებისთვის</h2>
+        <div class="names-list">
+          <div class="name-item">მარიამ-ირაკლი</div>
+          <div class="name-item">მარიამ-რატი</div>
+          <div class="name-item">თამარ-თორნიკე</div>
+          <div class="name-item">თამარ-ალექსანდრე</div>
+          <div class="name-item">მარიამ-გიორგი</div>
+          <div class="name-item">ფოტინე-დავითი</div>
+          <div class="name-item">ნინო-პაატა</div>
+          <div class="name-item">ია-მიხეილი</div>
+          <div class="name-item">საბა-მარიამი</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>ორსულნი</h2>
+        <div class="names-list">
+          <div class="name-item">ანა</div>
+          <div class="name-item">ნინო</div>
+          <div class="name-item">შორენა-მარიამი</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>უძლურნი</h2>
+        <div class="names-list">
+          <div class="name-item">ზურაბი (ნ.ოლქიშვილი)</div>
+          <div class="name-item">ფლორა (ნათია)</div>
+          <div class="name-item">ყრმა გიორგი</div>
+          <div class="name-item">სერაფიმა (ჯანაშიას შვილი)</div>
+          <div class="name-item">დავითი (შეყრილაძე)</div>
+          <div class="name-item">მანანა (მრევლი)</div>
+          <div class="name-item">გიორგი (ლია)</div>
+          <div class="name-item">თამაზი (ლია)</div>
+          <div class="name-item">თინათინი (დეა ჭიჭინაძის დედა)</div>
+          <div class="name-item">მარიამი (ნინო)</div>
+          <div class="name-item">ხათუნა (შეყრილაძე)</div>
+          <div class="name-item">დავითი (შეყრილაძე)</div>
+          <div class="name-item">მარიამი(მაკო) (შორენა)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>განსაცდელში მყოფნი</h2>
+        <div class="names-list">
+          <div class="name-item">გიორგი</div>
+          <div class="name-item">რევაზი</div>
+          <div class="name-item">დავითი</div>
+          <div class="name-item">გიორგი</div>
+          <div class="name-item">ლაზარე</div>
+          <div class="name-item">ნიკოლოზი</div>
+          <div class="name-item">მარიამი</div>
+          <div class="name-item">დავითი</div>
+          <div class="name-item">ნიკოლოზი</div>
+          <div class="name-item">ლია და გია</div>
+          <div class="name-item">ალექსანდრა (ავალიანი)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>დაუჯდომლის გოგოები</h2>
+        <div class="names-list">
+          <div class="name-item">შორენა შეყრილაძე</div>
+          <div class="name-item">ნანა ოლქიშვილი</div>
+          <div class="name-item">ირინა მენაბდე</div>
+          <div class="name-item">ხათუნა(ნინო) ნარეკლიშვილი</div>
+          <div class="name-item">ლანა(ლია) კერესელიძე</div>
+          <div class="name-item">მარიამი(მაკო) კალანდაძე</div>
+          <div class="name-item">მარიამ ბასილაძე</div>
+          <div class="name-item">მარიამ(ნათია) გოგორიშვილი</div>
+          <div class="name-item">ფოტინე(ნათია) ხუროშვილი</div>
+          <div class="name-item">ლია ბურდილაძე</div>
+          <div class="name-item">ნინო არეშიძე</div>
+          <div class="name-item">ნინო კიკაძე</div>
+          <div class="name-item">ნინო ვასაძე</div>
+          <div class="name-item">თინათინი კვინიკაძე</div>
+          <div class="name-item">ინგა(ალექსანდრა) ავალიანი</div>
+          <div class="name-item">ქეთევანი გოგუაძე</div>
+          <div class="name-item">თამარი გაბახაძე</div>
+          <div class="name-item">ანა გამსახურდია</div>
+        </div>
+      </div>
+
+      <div class="prayer-text">
+        <p>
+          ...... მომხმობელთა სახელსა ძისა შენისასა, განჰკურნე იგინი ყოველგვარ
+          უძლურებისა ხორცთასა და სულისა და მიუტევე მათ ყოველნი ბრალნი და ცოდვით
+          დაცემანი, განაშორე ყოველთა მდევართა, მიმომტაცებელთაგან მტერთაგან და
+          აღადგინე სარეცელსა ზედა ცოდვილისასა და სიმრთელითა სულისა და ხორცთაისა,
+          დაამკვიდრე წმინდასა საყდარსა შენსა, რაითა საქმეთაგან კეთილთა, ყოველთა
+          წმინდათა თანა, ადიდებდნენ სახელსა ძისა შენისა, რამეთუ შენდა შუენის
+          ყოველი დიდებაი, თანადაუსაბამოით ძითა შენითა და სულიწმიდით აწ და
+          მარადის და უკუნითი უკუნისამდე, ამინ.
+        </p>
+      </div>
+
+      <div class="prayer-text">
+        <p><em>ღირს არსი...</em></p>
+        <p>
+          დიდება მამასა და ძესა და წმიდასა სულსა, აწ და მარადის და უკუნითი
+          უკუნისამდე, ამინ.
+        </p>
+        <p><em>უფალო, შეგვიწყალენ (3-ჯერ)</em></p>
+        <p>
+          უფალო, იესუ ქრისტე, ძეო ღმრთისაო, ლოცვითა ყოვლად წმიდისა დედისა
+          შენისათა, ღირსთა და ღმერთშემოსილთა მამათა ჩვენთათა და ყოველთა წმიდათა
+          შენთათა, შეგვიწყალენ ჩვენ, ამინ.
+        </p>
+      </div>
+
+      <div class="counter-section">
+        <h2>
+          <span class="flower-icon">✦</span> მოწყალებისა კარი განგვიღე
+          <span class="flower-icon">✦</span>
+        </h2>
+        <div class="prayer-text">
+          მოწყალებისა კარი განგვიღე, კურთხეულო ღვთისმშობელო, რათა რომელნი ესე
+          შენ გესავთ, არა დავეცნეთ, არამედ განვერნეთ წინააღმდგომთა მტერთაგან,
+          რამეთუ შენ ხარ ცხოვრება ნათესავისა ქრისტიანეთასა. ამინ.
+        </div>
+        <div class="counter-display" id="counter">0</div>
+        <div class="counter-buttons">
+          <button class="btn btn-decrease" onclick="decreaseCounter()">
+            −
+          </button>
+          <button class="btn btn-reset" onclick="resetCounter()">წაშლა</button>
+          <button class="btn btn-increase" onclick="increaseCounter()">
+            +
+          </button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>90-ე ფსალმუნი</h2>
+        <div class="psalm-text">
+          <p>
+            <span class="flower-icon">✦</span> რომელი დამკვიდრებულ არს შეწევნითა
+            მაღლისაითა, საფარველსა ღმრთისა ზეცათაისა განისუენოს.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> ჰრქუას უფალსა: ხელის აღმპყრობელი
+            ჩემი ხარი შენ და შესავედრებელი ჩემი, ღმერთი ჩემი, და მე ვესავ მას.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> რამეთუ მან გიხსნეს შენ საფრხისა
+            მისგან მონადირეთაისა და სიტყვისა მისგან განსაკრთომელისა.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> ბეჭთ-საშუალითა მისითა გფარვიდეს
+            შენ, და საგრილსა ფრთეთა მისთასა ესვიდე; საჭურველად გარე-მოგადგეს შენ
+            ჭეშმარიტებაი მისი.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> არა გეშინოდის შიშისაგან ღამისა და
+            ისრისაგან, რომელი ფრინავნ დღისი;
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> ღუაწლისაგან, რომელი ვალნ ბნელსა
+            შინა, შემთხუევისაგან და ეშმაკისა შუა დღისა.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> დაეცნენ მარცხენით შენსა ათასეულნი
+            და ბევრეულნი - მარჯუენით შენსა, ხოლო შენ არა მიგეახლნენ.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> ხოლო შენ თუალითა შენითა ჰხედვიდე
+            და მისაგებელი ცოდვილთაი იხილო.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> რამეთუ შენ, უფალი, ხარ სასოი
+            ჩემდა და მაღალი გიყოფიეს შესავედრებელად შენდა.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> არა შევიდეს შენდა ძვირი, და
+            გუემაი არა მიეახლოს საყოფელთა შენთა.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> რამეთუ ანგელოზთა მისთადა
+            უბრძანებიეს შენთვის დაცუად შენდა ყოველთა შინა გზათა შენთა;
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> ხელთა მათთა ზედა აღგიპყრან შენ,
+            ნუსადა წარსცე ქვასა ფერხი შენი;
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> ასპიტსა და ვასილისკოსა ზედა
+            ხვიდოდი და დასთრგუნო შენ ლომი და ვეშაპი.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> რამეთუ მე მესვიდა, და ვიხსნა იგი
+            და დავიფარო იგი, რამეთუ იცნა სახელი ჩემი.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> ხმა-ჰყოს ჩემდამო, და მე ვისმინო
+            მისი და მის თანა ვიყო ჭირსა შინა; ვიხსნა იგი და ვადიდო იგი.
+          </p>
+          <p>
+            <span class="flower-icon">✦</span> დღეგრძელობითა განვაძღო იგი და
+            უჩუენო მას მაცხოვარებაი ჩემი.
+          </p>
+        </div>
+      </div>
+
+       <div class="btn-nexts">
+        <a href="fsalmuni.html" class="btn-next"style="margin-left:70px"
+          >ფსალმუნნი</a
+        ><br><br>
+        <a href="sagamo.html" class="btn-next"
+          >ძილად მისვლის ლოცვანი</a
+        >
+      </div>
+
+      <footer>
+       
+      </footer>
     </div>
 
-  </h4>
-  <br>
+    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">
+      ↑
+    </button>
 
-  <h4 class="dasasruli">
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" />
-    <span><strong>90-ე ფსალმუნი</strong></span><img width="30" height="30"
-      src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /><br><br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> რომელი
-    დამკვიდრებულ არს შეწევნითა მაღლისაითა, საფარველსა ღმრთისა ზეცათაისა განისუენოს.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> ჰრქუას უფალსა:
-    ხელის აღმპყრობელი ჩემი ხარი შენ და შესავედრებელი ჩემი, ღმერთი ჩემი, და მე ვესავ მას.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> რამეთუ მან
-    გიხსნეს შენ საფრხისა მისგან მონადირეთაისა და სიტყვისა მისგან განსაკრთომელისა.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> ბეჭთ-საშუალითა
-    მისითა გფარვიდეს შენ, და საგრილსა ფრთეთა მისთასა ესვიდე; საჭურველად გარე-მოგადგეს შენ ჭეშმარიტებაი მისი.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> არა გეშინოდის
-    შიშისაგან ღამისა და ისრისაგან, რომელი ფრინავნ დღისი;<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> ღუაწლისაგან,
-    რომელი ვალნ ბნელსა შინა, შემთხუევისაგან და ეშმაკისა შუა დღისა.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> დაეცნენ
-    მარცხენით შენსა ათასეულნი და ბევრეულნი - მარჯუენით შენსა, ხოლო შენ არა მიგეახლნენ.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> ხოლო შენ
-    თუალითა შენითა ჰხედვიდე და მისაგებელი ცოდვილთაი იხილო.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" />რამეთუ შენ,
-    უფალი, ხარ სასოი ჩემდა და მაღალი გიყოფიეს შესავედრებელად შენდა.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" />არა შევიდეს
-    შენდა ძვირი, და გუემაი არა მიეახლოს საყოფელთა შენთა.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" />რამეთუ
-    ანგელოზთა მისთადა უბრძანებიეს შენთვის დაცუად შენდა ყოველთა შინა გზათა შენთა;<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> ხელთა მათთა
-    ზედა აღგიპყრან შენ, ნუსადა წარსცე ქვასა ფერხი შენი;<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> ასპიტსა და
-    ვასილისკოსა ზედა ხვიდოდი და დასთრგუნო შენ ლომი და ვეშაპი.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> რამეთუ მე
-    მესვიდა, და ვიხსნა იგი და დავიფარო იგი, რამეთუ იცნა სახელი ჩემი.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> ხმა-ჰყოს
-    ჩემდამო, და მე ვისმინო მისი და მის თანა ვიყო ჭირსა შინა; ვიხსნა იგი და ვადიდო იგი.<br>
-    <img width="30" height="30" src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /> დღეგრძელობითა
-    განვაძღო იგი და უჩუენო მას მაცხოვარებაი ჩემი. <br>
-  </h4>
-  
+    <script>
+      let counter = 0;
 
-  <a class="fsalmuni" href="fsalmuni.html">ფსალმუნნი</a>
-  <a class="sagamo" href="sagamo.html"><img width="20" height="20" src="https://img.icons8.com/office/30/spa-flower.png"
-      alt="spa-flower" />ძილად მისვლის ლოცვანი<img width="20" height="20"
-      src="https://img.icons8.com/office/30/spa-flower.png" alt="spa-flower" /></a>
+      function increaseCounter() {
+        counter++;
+        updateCounter();
+      }
 
+      function decreaseCounter() {
+        if (counter > 0) {
+          counter--;
+          updateCounter();
+        }
+      }
 
-    
+      function resetCounter() {
+        counter = 0;
+        updateCounter();
+      }
 
+      function updateCounter() {
+        document.getElementById("counter").textContent = counter;
+      }
 
+      // Scroll to top functionality
+      window.onscroll = function () {
+        const btn = document.getElementById("scrollTopBtn");
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          btn.style.display = "flex";
+        } else {
+          btn.style.display = "none";
+        }
+      };
 
-
-
-
-
-
-  <!-- <h4 class="dasasruli">
-    <span><strong>ლოცვა სულიერი მოძღვრისათვის</strong></span><br><br>
-    უფალო, შეიწყალენ სულიერი მამა, მოძღვარი და მასწავლელი ჩემი (სახელი), იჴსენ იგი ყოვლისაგან ბოროტისა, განსწმიდე იგი
-    ყოვლისაგან ბიწისა და მოჰმადლე მას ჴორციელი და სულიერი სიმრთელე და
-    დაიფარე ლოცვითა წმიდათა ანგელოზთათა და ნუ დასჯი ცოდვათა ჩემთათჳს.<br>
-
-    უფალო, განუხსენ მას ყოველნი შეცოდებანი ჩემნი, მოანიჭე სიბრძნეჲ, სიყუარული და აღამაღლე სულითა და
-    ჴორცითა და მომმადლე ლოცვითა მისითა შენდობაჲ ცოდვათა ჩემთა და უხვად გარდამოავლინე
-    მას ზედა მდიდარნი წყალობანი შენი, შეეწიე და მიეც მას ცხორებაჲ
-    წრფელი და დაიცევ ხილულ და უხილავ მტერთაგან, დაიფარე ცილისწამებისაგან კაცთათა,
-    მოჰმადლე სამწყსოსა მისსა სინანული, რათა დაიმკჳდრონ სასუფეველი ღმრთისა.<br>
-
-    უფალო, მოიჴსენე სულიერი მამა და მასწავლელი ჩემი (სახელი), დაიცევ და დაიფარე მრავალჟამიერ, ამინ.<br>
-
-    ჰოი, ყოვლად სახიერო და სანატრელო იესუ ტკბილო,
-    განსწმიდე მადლითა შენითა სულიერი მამა, მოძღვარი და მასწავლელი ჩემი (სახელი),
-    განამართლე სიმართლითა შენითა და დაიცევ მრავალმოწყალებითა შენითა და ნუ გამოგვაკლებ საბრძანებელსა შენსა,
-    რათა ერთობით დავიმკჳდროთ სასუფეველი ცათაჲ. მოგვმადლე სულიერთა შვილთა მისთა შენდობაჲ შეცოდებათა ჩუენთა,
-    ვითარცა სახიერ ხარ და კაცთმოყუარე აწ და მარადის და უკუნითი უკუნისამდე, ამინ!<br>
-
-    დედაო ღმრთისაო, არა დაგეფარვის შენ შრომაჲ და სალმობაჲ სულიერისა
-    მამისა და მოძღვრისა ჩემისა (სახელი). შენ უწყი ყოველი საიდუმლოჲ ზრახვისა მისისაჲ.
-    აღუპყარ ჴელი შეწევნისა შენისა და დაიცევ ბოროტისაგან კაცთასა და საფარველითა
-    შენთა დაიცევ იგი ყოვლისაგან ტანჯვისა და იწროებისა, აკურთხე საქმენი მისნი და
-    ლოცვითა მისითა მოგვმადლე მოთმინებაჲ, მორჩილებაჲ, მდუმარებაჲ, სასოებაჲ, თავმდაბლობაჲ, სიმტკიცეჲ.<br>
-
-    აწ და მარადის და უკუნითი უკუნისამდე, ამინ!<br>
-  </h4>
-
-  <br> -->
-
-
-
-
-
-  <script src="js/bootstrap.js"></script>
-  <script src="index.js"></script>
-</body>
-
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
 </html>
