@@ -38,9 +38,33 @@
       border-bottom: 2px solid #e2e8f0;
     }
 
+    .btn-nexts {
+        display:btn-next grid;
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+
+      .btn-next {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        padding: 15px;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-next:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
     .nav-btn {
-      width: 45px;
-      height: 45px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       border: none;
@@ -269,12 +293,14 @@
     </div>
 
     <div class="nav-bottom">
-      <a href="index.html" class="nav-btn">
+      <a href="index.html" class="nav-btn" style="margin-bottom: 15px;">
         <span style="color: white; font-size: 20px;">←</span>
       </a>
-      <a href="sagamo.html" class="nav-btn">
-        <span style="color: white; font-size: 20px;">→</span>
-      </a>
+     <div class="btn-nexts">
+        <a href="sagamo.html" class="btn-next"style="margin-left:10px"
+          >საღამოს ლოცვა</a 
+        ><br><br>
+      </div>
     </div>
   </div>
 
