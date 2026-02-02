@@ -1,29 +1,159 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./styles.css">
-    <title>Document</title>
+    <title>დაუჯდომელი ყოვლადწმიდისა ღვთისმშობელისა</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 8px;
+        color: #2d3748;
+        line-height: 1.8;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e2e8f0;
+      }
+
+      h1 {
+        color: #c53994;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        color: #718096;
+        font-size: 1.1em;
+        font-style: italic;
+      }
+
+      .section {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .section h2 {
+        color: #2d3748;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .section h2::before,
+      .section h2::after {
+        content: "✦";
+        color: #c53994;
+      }
+
+      .prayer-text {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid #c53994;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .cross-icon {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2em;
+      }
+
+      .btn-next {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        margin-top: 20px;
+      }
+
+      .btn-next:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        right: 5px;
+        bottom: 90px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: rgba(22, 5, 119, 0.808);
+        color: white;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: rgba(22, 5, 119, 1);
+      }
+
+      .arrow-back {
+        display: inline-block;
+        margin-top: 20px;
+      }
+
+      .arrow-back img {
+        transition: transform 0.3s ease;
+      }
+
+      .arrow-back:hover img {
+        transform: translateX(-5px);
+      }
+    </style>
 </head>
 
+<body>
+  <div class="container">
+    <header>
+      <div class="cross-icon">✦</div>
+      <h1>დაუჯდომელი ყოვლადწმიდისა ღვთისმშობელისა</h1>
+    </header>
 
-<body class="full">
-    <br>
-
-<h3 class="dasawyisi"><strong><img height="30" width="30" src="icons8-orthodox-cross-50.png"></strong></h3>
-
-
- <h3 class="troparni"><strong>დაუჯდომელი ყოვლადწმიდისა ღვთისმშობელისა</strong></h3>
-
-  <p>
+    <div class="section">
+      <div class="prayer-text">
     სახელითა მამისაჲთა და ძისათა და სულისა წმიდისაჲთა. ამინ.<br>
     
     უფალო იესუ ქრისტე, ძეო ღმრთისაო, ლოცვითა ყოვლადწმიდისა დედისა შენისაჲთა და ყოველთა წმიდათაჲთა, შეგჳწყალენ. ჩვენ. ამინ.<br>
@@ -333,35 +463,31 @@
  მიიღე, ყოვლადკეთილ-მოღუაწეო, ყოვლადწმიდაო დედოფალო, ესე პატიოსანი ძღვენი, შენ მხოლოსათვის ჩვენ მიერ, უღირსთა მონათა შენთაგან, ყოველთაგან ნათესავთა გამორჩეულო, ყოველთაგან არსთა ზეცისათა და ქვეყანისათა უმაღლესად გამოჩინებულო. ამისთვისცა ხოლო შენ მიერ იქმნა უფალი ძალთა ჩვენთანა, და შენ მიერ ძე ღვთისა ვიცანთ ჩვენ, და ღირს-ვიქმნენით წმიდასა ხორცსა მისსა და პატიოსანსა სისხლსა მისსა. ამისთვისცა ნეტარ ხარ თესლითი თესლამდე, ღვთივსანატრელო, ქერუბიმთა უბრწყინვალესო, სერაბიმთა უპატიოსნესო მხოლოო; და აწ, ყოვლადსაგალობელო ღვთისმშობელო ქალწულო, ვედრებად ჩვენ უღირსთა მონათა შენთათვის ნუ დასცხრები, რათა ვიხსნნეთ ჩვენ ყოვლისაგან ზრახვისა ბოროტისა, გარემოდგომილისა ვნებისა, დავიცვნეთ უჭირველად ყოვლისაგან შემჭამელისა საბრთხისა ეშმაკთასა. არამედ ვითარმედ აღსასრულამდე ვედრებითა შენითა დამიცვენ ჩვენ, რათა შენითა შუა-მდგომელობითა და შეწევნითა ცხოვნებულნი და თაყვანის-ცემასა ყოველსა ზედა ყოვლისათვის სამებისა წმიდისა და ყოველთა შემოქმედისა მადლობასა აღვავლენდეთ, აწ და მარადის და უკუნითი უკუნისამდე. ამინ.
 <br><br>
 <b>ლოცვა</b><br>
-ჰოი, დიდო მეუფეო, ყოვლისა მპყრობელო, მოწყალეო უფალო, იესო ქრისტე, ღმერთო ჩვენო; აჰა, ვედრებად შენდა მე, ფრიად ცოდვილი, აღვსძრავ დედასა შენსა, ყოვლადუბიწოსა, ყოვლადწმიდასა დედოფალსა, ქალწულსა ღვთისმშობელსა, ყოვლადმოწყალესა, ყოვლისა სოფლისა მვედრებელსა ნათესავისა ქრისტიანეთასა, შენსა ჩვენდა მშობელსა ხორციელად ღვთისა ჩვენისა, აურაცხელისათვის მოწყალებისა შენისა, რომელი ჩვენ ზედა ჰყავ; მისითა უკუე ვედრებითა, იესო ქრისტე, ღმერთო ჩვენო, ჩემ უღირსსა ზედა დიდი მადლი და წყალობაი შენი აჩვენე და მოტევებაი ცოდვათა მომმადლე მე და ღირს-მყავ მე დამკვიდრებად სასუფეველსა შენსა ყოველთა თანა წმიდათა, დაუსრულებელთა საუკუნეთა უკუნისამდე. ამინ.</a>
-</p>
+ჰოი, დიდო მეუფეო, ყოვლისა მპყრობელო, მოწყალეო უფალო, იესო ქრისტე, ღმერთო ჩვენო; აჰა, ვედრებად შენდა მე, ფრიად ცოდვილი, აღვსძრავ დედასა შენსა, ყოვლადუბიწოსა, ყოვლადწმიდასა დედოფალსა, ქალწულსა ღვთისმშობელსა, ყოვლადმოწყალესა, ყოვლისა სოფლისა მვედრებელსა ნათესავისა ქრისტიანეთასა, შენსა ჩვენდა მშობელსა ხორციელად ღვთისა ჩვენისა, აურაცხელისათვის მოწყალებისა შენისა, რომელი ჩვენ ზედა ჰყავ; მისითა უკუე ვედრებითა, იესო ქრისტე, ღმერთო ჩვენო, ჩემ უღირსსა ზედა დიდი მადლი და წყალობაი შენი აჩვენე და მოტევებაი ცოდვათა მომმადლე მე და ღირს-მყავ მე დამკვიდრებად სასუფეველსა შენსა ყოველთა თანა წმიდათა, დაუსრულებელთა საუკუნეთა უკუნისამდე. ამინ.
+      </div>
+    </div>
 
+    <div style="text-align: center;">
+      <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+      <a href="index.html" class="btn-next">← მთავარი გვერდი</a>
+    </div>
+  </div>
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="emojidex-emoji" src="up-chevron.png"  alt="arrow up" width="20" height="20" /></button>
+  <script>
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
 
-                                        <a href="index.html"><img height ="40" widht="40" class="arrow2" src="back.png"></a>
-                                        <script>
-                                            // Get the button
-                                            let mybutton = document.getElementById("myBtn");
-                                            
-                                            // When the user scrolls down 20px from the top of the document, show the button
-                                            window.onscroll = function() {scrollFunction()};
-                                            
-                                            function scrollFunction() {
-                                              if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-                                                mybutton.style.display = "block";
-                                              } else {
-                                                mybutton.style.display = "none";
-                                              }
-                                            }
-                                            
-                                            // When the user clicks on the button, scroll to the top of the document
-                                            function topFunction() {
-                                              document.body.scrollTop = 0;
-                                              document.documentElement.scrollTop = 0;
-                                            }
-                                            </script>
-                                            
-  <script src="js/bootstrap.js"></script>
-  <script src="index.js"></script>
+    function scrollFunction() {
+      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>

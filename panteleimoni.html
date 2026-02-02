@@ -1,27 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./styles.css">
-    <title>Document</title>
+    <title>დაუჯდომელი საგალობელი წმიდისა დიდმოწამისა და მკურნალისა პანტელეიმონისა</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Georgia", serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 8px;
+        color: #2d3748;
+        line-height: 1.8;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e2e8f0;
+      }
+
+      h1 {
+        color: #c53994;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        color: #718096;
+        font-size: 1.1em;
+        font-style: italic;
+      }
+
+      .section {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .section h2 {
+        color: #2d3748;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .section h2::before,
+      .section h2::after {
+        content: "✦";
+        color: #c53994;
+      }
+
+      .prayer-text {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 4px solid #c53994;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .cross-icon {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2em;
+      }
+
+      .btn-next {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        margin-top: 20px;
+      }
+
+      .btn-next:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        right: 5px;
+        bottom: 90px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: rgba(22, 5, 119, 0.808);
+        color: white;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: rgba(22, 5, 119, 1);
+      }
+
+      .arrow-back {
+        display: inline-block;
+        margin-top: 20px;
+      }
+
+      .arrow-back img {
+        transition: transform 0.3s ease;
+      }
+
+      .arrow-back:hover img {
+        transform: translateX(-5px);
+      }
+    </style>
 </head>
 
-<body class="full">
-    <br>
+<body>
+  <div class="container">
+    <header>
+      <div class="cross-icon">✦</div>
+      <h1>დაუჯდომელი საგალობელი წმიდისა დიდმოწამისა და მკურნალისა პანტელეიმონისა</h1>
+    </header>
 
-<h3 class="dasawyisi"><strong><img height="30" width="30" src="icons8-orthodox-cross-50.png"></strong></h3>
-
-
- <h3 class="troparni"><strong>დაუჯდომელი საგალობელი წმიდისა დიდმოწამისა და მკურნალისა პანტელეიმონისა</strong></h3>
-
-<p>
+    <div class="section">
+      <div class="prayer-text">
 
     ლოცვითა წმიდათა მამათა ჩვენთათა, უფალო, იესუ ქრისტე, ღმერთო ჩვენო, შეგვიწყალენ ჩვენ.<br>
 
@@ -87,21 +218,11 @@
 გიხაროდენ, განრღვეულთა მამრთელებელო;<br>
 გიხაროდენ, ღმრთივსათნოჲსა მის დიდმოწამეობისა ხატო შვენიერო და უვეცხლოჲსა კურნებისა მადლითა მით ქრისტესმიერთა განცისკრებულო, წმიდაო მკურნალო პანტელეიმონ!
 
- 
-<br><br>
+ <br><br>
+
 <b>კონდაკი 2</b><br>
 გიხილა რაჲ მეფემან ჭურჭელი საღმრთოჲ, შვენიერებაჲ იგი სულისა შენისაჲ შეიყვარა, რამეთუ შენ მიწისა ამაოებაჲ მოიძულე და ღმრთეებრივითა სიყვარულითა და მოწამეობრივისა გვირგვინისა სურვილითა აღტრფობილი მგალობლად ფრთოვან-იქმენ: ალილუია.
 <br><br>
-<b>იკოსი 2</b><br>
-ზეშთაცოდნითა განმდიდრებულო მხედარო ქრისტესო, რომელმან საღმრთოჲსა სიტყვისა განცხადებითა მეფე იგი მაქსიმიანე განაკვირვე, შენდამი, ქრისტესმიერისა კადნიერებისა მქონებელისა მიმართ, ესრეთ ვმეტყველებთ:
-<br>
-გიხაროდენ, სარწმუნოებისა ზედა მართლმდგომარეო;<br>
-გიხაროდენ, ნერგო ჭეშმარიტისა ღმრთისმსახურებისაო;<br>
-გიხაროდენ, მზაკვარისა მანქანებისა შემმუსვრელო;<br>
-გიხაროდენ, უშჯულოებისა მამხილებელო;<br>
-გიხაროდენ, კერპთა მათ საცთურიანთა დამამხობელო;<br>
-გიხაროდენ, უღმრთოთა კრებულისა მაოტებელო;<br>
-გიხაროდენ, უხრწნელისა საუნჯისა მომგებელო;<br>
 გიხაროდენ, რომელი ანგელოზთა თანა ნეტარებ;<br>
 გიხაროდენ, რამეთუ მოწამეთა თანა განსცხრები;<br>
 გიხაროდენ, ბელიარისა განმაქიქებელო;<br>
@@ -375,33 +496,32 @@
 ჰოი, მკურნალო უვერცხლოო და ჩვენთა სალმობათა შემტყვებარო, წმიდაო დიდმოწამეო პანტელეიმონ, ლოცვითა შენითა მსწრაფლშეწევნადითა განაბრწყინვე ღვთივდაცული ერი ჩვენი და მეუფება მისი. განაძლიერე მსახურებასა შინა უწმიდესი და უნეტარესი, სრულიად საქართველოს კათოლიკოს-პატრიარქი, მცხეთა-თბილისის მთავარეპისკოპოსი, ბიჭვინთისა და ცხუმ-აფხაზეთის მიტროპოლიტი, დიდი მეუფე, მამაი ჩვენი ილია, წმიდანი მსოფლიოს მართლმადიდებელნი პატრიარქნი, ყოვლადსამღვდელონი მიტროპოლიტნი, მთავარეპისკოპოსნი და ეპისკოპოსნი. მღვდელთა და დიაკონთა ღმრთისმსახურებისა სიყვარული მოჰმადლე, სამონაზნოთა წესთა მაცხოვნებელი მღვიძარებაი მოანიჭე და ყოველთა მართლმადიდებელთა ცხოველსმყოფელისა სიყვარულისა ბჭენი განუხვენ, რაითა სულიერსა სიმრთელესა კვალადგებულნი და ღმრთისა სასუფეველსა შეწყნარებულნი ჩვენცა შენ თანა ვადიდებდეთ არარაისაგან კაცთა არსად მომყვანებელსა ღმერთსა, რომლისა არს სუფევა, ძალი და დიდება, მამისა და ძისა და წმიდისა სულისა, აწ და მარადის და უკუნითი უკუნისამდე. ამინ.
 </p>
 
+ჰოი, მკურნალო უვერცხლოო და ჩვენთა სალმობათა შემტყვებარო, წმიდაო დიდმოწამეო პანტელეიმონ, ლოცვითა შენითა მსწრაფლშეწევნადითა განაბრწყინვე ღვთივდაცული ერი ჩვენი და მეუფება მისი. განაძლიერე მსახურებასა შინა უწმიდესი და უნეტარესი, სრულიად საქართველოს კათოლიკოს-პატრიარქი, მცხეთა-თბილისის მთავარეპისკოპოსი, ბიჭვინთისა და ცხუმ-აფხაზეთის მიტროპოლიტი, დიდი მეუფე, მამაი ჩვენი ილია, წმიდანი მსოფლიოს მართლმადიდებელნი პატრიარქნი, ყოვლადსამღვდელონი მიტროპოლიტნი, მთავარეპისკოპოსნი და ეპისკოპოსნი. მღვდელთა და დიაკონთა ღმრთისმსახურებისა სიყვარული მოჰმადლე, სამონაზნოთა წესთა მაცხოვნებელი მღვიძარებაი მოანიჭე და ყოველთა მართლმადიდებელთა ცხოველსმყოფელისა სიყვარულისა ბჭენი განუხვენ, რაითა სულიერსა სიმრთელესა კვალადგებულნი და ღმრთისა სასუფეველსა შეწყნარებულნი ჩვენცა შენ თანა ვადიდებდეთ არარაისაგან კაცთა არსად მომყვანებელსა ღმერთსა, რომლისა არს სუფევა, ძალი და დიდება, მამისა და ძისა და წმიდისა სულისა, აწ და მარადის და უკუნითი უკუნისამდე. ამინ.
+      </div>
+    </div>
 
+    <div style="text-align: center;">
+      <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+      <a href="index.html" class="btn-next">← მთავარი გვერდი</a>
+    </div>
+  </div>
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="emojidex-emoji" src="up-chevron.png"  alt="arrow up" width="20" height="20" /></button>
+  <script>
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
 
-                                        <a href="index.html"><img height ="40" widht="40" class="arrow2" src="back.png"></a>
-                                        <script>
-                                            // Get the button
-                                            let mybutton = document.getElementById("myBtn");
-                                            
-                                            // When the user scrolls down 20px from the top of the document, show the button
-                                            window.onscroll = function() {scrollFunction()};
-                                            
-                                            function scrollFunction() {
-                                              if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-                                                mybutton.style.display = "block";
-                                              } else {
-                                                mybutton.style.display = "none";
-                                              }
-                                            }
-                                            
-                                            // When the user clicks on the button, scroll to the top of the document
-                                            function topFunction() {
-                                              document.body.scrollTop = 0;
-                                              document.documentElement.scrollTop = 0;
-                                            }
-                                            </script>
-                                            
-  <script src="js/bootstrap.js"></script>
-  <script src="index.js"></script>
-                                            </body>
+    function scrollFunction() {
+      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
