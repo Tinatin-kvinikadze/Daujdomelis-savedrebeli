@@ -31,16 +31,23 @@
       }
 
       header {
-        text-align: center;
-        margin-bottom: 30px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #e2e8f0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        margin-bottom: 14px;
+        padding: 6px 12px 6px 48px;
+        border-radius: 14px;
+        border: 1px solid rgba(197, 57, 148, 0.25);
+        background: linear-gradient(135deg, #fff7fb 0%, #f7f3ff 100%);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
       }
 
       h1 {
         color: #c53994;
-        font-size: 2.5em;
-        margin-bottom: 10px;
+        font-size: 2.0em;
+        margin: 0;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       }
 
@@ -51,9 +58,9 @@
       }
 
       .section {
-        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        background: linear-gradient(135deg, #fff1e6 0%, #ffe5d5 100%);
         border-radius: 15px;
-        padding: 20px;
+        padding: 10px;
         margin-bottom: 20px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
@@ -76,11 +83,16 @@
       }
 
       .prayer-text {
-        background: white;
-        padding: 20px;
+        background: linear-gradient(180deg, #ffffff 0%, #fffdf8 100%);
+        padding: 24px 20px;
         border-radius: 10px;
-        border-left: 4px solid #c53994;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
         margin-bottom: 20px;
+        border-left: 4px solid #c53994;
+        text-align: justify;
+        text-align-last: left;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
 
@@ -142,14 +154,61 @@
       .arrow-back:hover img {
         transform: translateX(-5px);
       }
+
+      .top-back {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 2px;
+        }
+
+        .top-back {
+          width: 30px;
+          height: 30px;
+          font-size: 18px;
+          left: 10px;
+        }
+
+        header {
+          min-height: 40px;
+          padding: 6px 10px 6px 44px;
+        }
+
+        .prayer-text {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+          padding: 18px 14px;
+        }
+
+        h1 {
+          font-size: 1.4em;
+        }
+      }
     </style>
 </head>
 
 <body>
   <div class="container">
     <header>
-      <div class="cross-icon">✦</div>
-      <h1>დაუჯდომელი ყოვლადწმიდისა ღვთისმშობელისა</h1>
+      <a href="index.html" class="top-back" aria-label="მთავარ გვერდზე დაბრუნება">←</a>
     </header>
 
     <div class="section">
@@ -489,5 +548,18 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+  </script>
+  <script>
+    (function () {
+      const headingPattern =
+        /(^|<br\s*\/?>|\n)\s*((?:კონდაკი|იკოსი)\s*\d+)(?=\s*(?:<br\s*\/?>|\n|$))/g;
+
+      document.querySelectorAll(".prayer-text").forEach((block) => {
+        block.innerHTML = block.innerHTML.replace(
+          headingPattern,
+          "$1<strong>$2</strong>",
+        );
+      });
+    })();
   </script>
 </body>

@@ -1,26 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>იტირე სულო</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <div class="accordian-body">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-               <h1 class="strongi"></h1><br><br>
-               <h3 class="dasawyisi"><strong><img height="30" width="30" src="icons8-orthodox-cross-50.png"></strong></h3>
+      body {
+        font-family: "Georgia", serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 8px;
+        color: #2d3748;
+        line-height: 1.8;
+      }
 
- 
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+      }
 
-<p>ლოცვითა წმიდათა მამათა ჩვენთათა, უფალო იესო ქრისტე, ღმერთო ჩვენო, შეგვიწყალენ ჩვენ. ამინ.<br>
+      header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 56px;
+        margin-bottom: 24px;
+        padding: 12px 16px 12px 56px;
+        border-radius: 14px;
+        border: 1px solid rgba(197, 57, 148, 0.25);
+        background: linear-gradient(135deg, #fff7fb 0%, #f7f3ff 100%);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      }
+
+      h1 {
+        color: #c53994;
+        font-size: 2.0em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .section {
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        border-radius: 15px;
+        padding: 0;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .prayer-text {
+        background: white;
+        padding: 20px 0;
+        border-radius: 10px;
+        width: calc(100% + 44px);
+        margin-left: -22px;
+        margin-right: -22px;
+        margin-bottom: 20px;
+        text-align: justify;
+        text-align-last: left;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .prayer-text p {
+        margin: 0;
+      }
+
+      .cross-icon {
+        text-align: center;
+        margin-bottom: 12px;
+        font-size: 2em;
+      }
+
+      .top-back {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-next {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        padding: 16px 20px;
+        border-radius: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.05em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+      }
+
+      .btn-next:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 16px;
+        }
+
+        .top-back {
+          width: 30px;
+          height: 30px;
+          font-size: 18px;
+          left: 10px;
+        }
+
+        header {
+          min-height: 50px;
+          padding: 10px 12px 10px 48px;
+        }
+
+        .prayer-text {
+          width: calc(100% + 24px);
+          margin-left: -12px;
+          margin-right: -12px;
+        }
+
+        h1 {
+          font-size: 1.4em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="index.html" class="top-back" aria-label="მთავარ გვერდზე დაბრუნება">←</a>
+        <h1>იტირე სულო</h1>
+      </header>
+
+      <div class="section">
+        <div class="prayer-text">
+          <p>ლოცვითა წმიდათა მამათა ჩვენთათა, უფალო იესო ქრისტე, ღმერთო ჩვენო, შეგვიწყალენ ჩვენ. ამინ.<br>
 
 დიდება შენდა, ღმერთო ჩვენო, დიდება შენდა!<br><br>
 
@@ -243,11 +380,9 @@
  დასწვი ცეცხლსა შინა სულგრძელებისასა ბორიტნი განზრახუანი ჩემნი, და ვითარცა რკინაჲ ბრძმედსა შინა გამოახურვე გული ჩემი, 
  და განაახლე, და განწმიდე იგი ცოდუათაგან ჩემთა, რაჲთა სიხარულითა გიგალობო შენ: <br>
 <i>ალილუია, ალილუია, ალილუია.</i></p>
+        </div>
+      </div>
+      <a href="index.html" class="btn-next">← მთავარი გვერდი</a>
     </div>
- 
-
-  <a href="index.html"><img height ="40" width="40" class="arrow2" src="back.png"></a>
-  <br>
-    
-</body>
+  </body>
 </html>
