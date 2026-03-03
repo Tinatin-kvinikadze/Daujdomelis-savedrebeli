@@ -145,6 +145,31 @@
           font-size: 1.4em;
         }
       }
+
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 55px;
+        height: 55px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .scroll-top:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
     </style>
   </head>
   <body>
@@ -383,5 +408,22 @@
       </div>
       <a href="index.html" class="btn-next">← მთავარი გვერდი</a>
     </div>
+
+    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script>
+      window.onscroll = function () {
+        const btn = document.getElementById("scrollTopBtn");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          btn.style.display = "flex";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
   </body>
 </html>
