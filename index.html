@@ -348,6 +348,132 @@
         color: #718096;
       }
 
+      .ghirs-arsi-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .ghirs-arsi-wrap em {
+        margin: 0;
+      }
+
+      .toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border: none;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        flex-shrink: 0;
+      }
+
+      .toggle-btn:hover {
+        transform: scale(1.15);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .toggle-btn.open {
+        transform: rotate(180deg);
+      }
+
+      .toggle-btn.open:hover {
+        transform: rotate(180deg) scale(1.15);
+      }
+
+      .ghirs-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+
+      .ghirs-content.show {
+        max-height: 10000px;
+      }
+
+      .accordion-item {
+        border: 1px solid rgba(197, 57, 148, 0.15);
+        border-radius: 10px;
+        margin-bottom: 8px;
+        overflow: hidden;
+        background: #fdf8ff;
+        display: none;
+      }
+
+      .accordion-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 14px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #c53994;
+        background: linear-gradient(135deg, #fff7fb 0%, #f7f3ff 100%);
+        user-select: none;
+        transition: background 0.2s;
+        font-size: 0.95em;
+      }
+
+      .accordion-header:hover {
+        background: linear-gradient(135deg, #f3e8f9 0%, #ede4ff 100%);
+      }
+
+      .accordion-header .acc-arrow {
+        transition: transform 0.3s ease;
+        font-size: 14px;
+      }
+
+      .accordion-header.active .acc-arrow {
+        transform: rotate(180deg);
+      }
+
+      .accordion-header .acc-date {
+        font-size: 0.8em;
+        color: #718096;
+        font-weight: normal;
+        margin-left: 6px;
+      }
+
+      .accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        padding: 0 14px;
+      }
+
+      .accordion-body.show {
+        max-height: 3000px;
+        padding: 10px 14px;
+      }
+
+      .accordion-body p {
+        margin-bottom: 8px;
+        line-height: 1.7;
+      }
+
+      .accordion-item.current {
+        border-color: #c53994;
+        box-shadow: 0 2px 10px rgba(197, 57, 148, 0.2);
+        display: block;
+      }
+
+      .accordion-item.current .accordion-header {
+        background: linear-gradient(135deg, #f3e0f7 0%, #e8d5ff 100%);
+      }
+
+      .accordion-item.current .accordion-header::after {
+        content: " ✦";
+        color: #c53994;
+        font-size: 0.8em;
+      }
+
       @media (max-width: 768px) {
         .container {
           padding: 2px;
@@ -539,7 +665,167 @@
       </div>
 
       <div class="prayer-text">
-        <p><em>ღირს არსი...</em></p>
+        <p class="ghirs-arsi-wrap">
+          <em>ღირს არსი...</em>
+          <button class="toggle-btn" id="ghirsToggle" onclick="toggleGhirs()" title="ტექსტის ჩვენება/დამალვა">▼</button>
+        </p>
+        <div class="ghirs-content" id="ghirsContent">
+
+          <div class="accordion-item" data-period="bzoba">
+            <div class="accordion-header" onclick="toggleAcc(this)">ბზობის კვირას <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ღმერთი უფალი გამოგვიჩნდა ჩუენ დღეს, განმზადეთ დღესასწაული და მხიარულებით მოვედით და განვადიდოთ ქრისტე ბაიაითია და რტოებითა ქებისმეტყუელთა, კურთხეულ არს მომავალი სახლითა უფლისათა უკუნისამდე.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="did-orshab">
+            <div class="accordion-header" onclick="toggleAcc(this)">დიდ ორშაბათს <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>განადიდე შენ, ქრისტე, მშობელი შენი ღმრთისმშობელი, რომლისა მიერ ქმნისა ჩუენისა თჳთ მოქმედმან, მჰსგავს ვნებანი, შეისხენ ჴორცნი დამჴსნელნი უმეცრებათანი, ამას უკუე ჰნატრიან ყოველნი ტომნი და შენ გადიდებენ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="did-samshab">
+            <div class="accordion-header" onclick="toggleAcc(this)">დიდ სამშაბათს <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>დაუტევნელისა ღმრთისა მუცლითა დამტევნელსა და სოფლის სიხარულის მშობელსა, შენ გადიდებთ, ღმრთისმშობელო ქალწულო.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="did-otkhshab">
+            <div class="accordion-header" onclick="toggleAcc(this)">დიდ ოთხშაბათს <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>სულთ განწმედითა და ბაგეთა სიმართლითა, მოვედით, განვადიდოთ უქორწინებელი და ყოვლად უბიწო დედა ემმანუილისა, მისგან შობილისა მიმართ ოხის მიმრთმეველი, ულხინე სულთა ჩუენთა, ქრისტე ღმერთო ჩუენო და გვაცხოვნენ ჩუენ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="did-khutshab">
+            <div class="accordion-header" onclick="toggleAcc(this)">დიდ ხუთშაბათს <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>სტუმრობისა საღმრთოსა და უკვდავისა ტაბლისა, ზესთა ადგილთა გრძნობათა, უმაღლესთასა, მორწმუნენო, მოვედით, მოვიღოთ, უზენაესისა სიტყვისა სიტყვითა განსწავლულთა და მას ვადიდებდეთ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="did-paraskev">
+            <div class="accordion-header" onclick="toggleAcc(this)">დიდ პარასკევს <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>უპატიოსნესსა ქერუბიმთასა და აღმატებით უზესთაესსა სერაფიმთასა, განუჴრწნელად მშობელსა სიტყვისა ღმრთისასა, მხოლოსა ღმრთისმშობელსა გალობით გადიდებდეთ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="did-shabat">
+            <div class="accordion-header" onclick="toggleAcc(this)">დიდ შაბათს <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ნუ მტირ მე, დედაო, მხილველი, საფლავსა შინა ძისა, რომელი მუცლად-მიღე, თვინიერ თესლისა, რამეთუ აღვსდგე და ვიდიდო მე ღმრთეებრ და მაღალ ვყვნე დიდებით, სარწმუნოდ და სურვილით დაუცხრომელად შენნი მგალობელნი.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="aghdgoma">
+            <div class="accordion-header" onclick="toggleAcc(this)">აღდგომიდან ამაღლებამდე <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ანგელოზი ღაღადებს, მიმადლებულო წმიდაო ქალწულო, გიხაროდენ და კუალად გიხაროდენ. ძეჲ შენი აღსდგა მესამესა დღესა საფლავით და მკუდარნი აღადგინა, ერნო, გიხაროდენ.</p>
+              <p>განათლდი, განათლდი, ახალო იერუსალიმ, დღეს დიდებაჲ უფლისა შენზედა გამობრწყინდა, განსცხრებოდე და იხარებდ სიონ, და აწ შენცა იშუებდი, ღმრთის-მშობელო, აღდგომასა ძისა შენისასა.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="amagleba">
+            <div class="accordion-header" onclick="toggleAcc(this)">ამაღლებიდან სულთმოფენობამდე <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ადიდებს სული ჩემი ქუეყანით ზეცას ამაღლებულსა ქრისტესა ცხოვრების მომცემელსა.</p>
+              <p>ჰშევ, ქალწულო, მიუწთომელი ბუნებათა, უჟამოდ გამოუთქუმელი, ამისთჳს უბიწოო, ყოველნი მორწმუნენი გადიდებენ შენ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="sultmopen">
+            <div class="accordion-header" onclick="toggleAcc(this)">სულთმოფენობიდან ყოველთა წმიდათა კვირიაკემდე <span class="acc-date">(შაბათის ჩათვლით)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>მოციქულთა რა იხილეს გარდამოსლვა ნუგეშინისმცემელისა, დაუკვირდათ, ვითარ სახითა ცეცხლისა ენათათა გამოჩნდა სულიწმიდაჲ.</p>
+              <p>გიხაროდენ შენ, წმიდაო დედუფალო, დედათა დიდებაო, ქალწულთა თვალო, რამეთუ მეტყუელებად ვერ შემძლებელ ვართ ღირსად ქებასა შობისა შენისასა, ამისთჳს სარწმუნოებით გადიდებთ შენ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="feriscvaleba">
+            <div class="accordion-header" onclick="toggleAcc(this)">ფერისცვალებიდან მის წარგზავნამდე <span class="acc-date">(6-14 აგვისტო, ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ადიდე, სულო ჩემო, თაბორს ზედა ფერისცვალება უფლისა.</p>
+              <p>შობა შენი უჴრწნელ არს ქალწულო, ღმერთი მუცლით შენით გამოვიდა განჴორციელებული, კაცთა შორის იქცეოდა, ამისთჳს ჩუენ შენ, ღმრთისმშობელო, სამართლად ყოველი გადიდებთ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="midzineba">
+            <div class="accordion-header" onclick="toggleAcc(this)">ღმრთისმშობლის მიძინებიდან მის წარგზავნამდე <span class="acc-date">(15-25 აგვისტო, ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ანგელოსთა მიცვალება ყოველადწმიდისა იხილეს და უკვირდათ, ვითარ ქალწული აღვალს ქუეყანით ზეცას.</p>
+              <p>ძლეულ იქმნეს ბუნებანი მეტყუელნი შენთჳს, ქალწულო უბიწოო, ქალწულებრივი შობა და სიკუდილი ცხოვრების მომცემელი და შემდგომად შობისა ქალწულად ჰგიე და მოკუდავი ცხოველ ხარ, ღმრთისმშობელო, სამართლად გადიდებთ შენ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="shoba-ghvtismshobeli">
+            <div class="accordion-header" onclick="toggleAcc(this)">ღმრთისმშობლის შობიდან მის წარგზავნამდე <span class="acc-date">(8-13 სექტემბერი, ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ადიდებს სული ჩემი ბერწთაგან შობილსა ქალწულსა მარიამს.</p>
+              <p>განჰკვიდრეს ზესკნელსა ცანი და კიდენი ქუეყანისანი შეძრწუნებულ იქმნეს, რაჟამს ღმერთი შენ მიერ კაცთა გამოეხცადა და საშო შენი უმაღლეს ცათა საყდართა გამოაჩინა, ამისთჳს, ღმრთისმშობელო, ანგელოსნი და კაცნი, ვითარცა ღირს-ხარ, გადიდებენ შენ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="juartamagleba">
+            <div class="accordion-header" onclick="toggleAcc(this)">ჯუართამაღლებიდან მის წარგზავნამდე <span class="acc-date">(14-22 სექტემბერი, ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ადიდებს სული ჩემი ყოვლადპატიოსანსა ჯვარსა უფლისასა.</p>
+              <p>საიდუმლო სამოთხე ხარ, ღმრთისმშობელო, რომელმან უმუშაკოდ აღზარდე ქრისტე, ხოლო ჩუენ, ჯვარითა ცხოვრებაშემოსილნი, ქუეყანასა ზედა დანერგულსა ძელსა ამისთჳს აწ აღვამაღლებთ, თაყუანის-ვსცემთ და შენ გადიდებთ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="tadzrad">
+            <div class="accordion-header" onclick="toggleAcc(this)">ტაძრად მიყვანებიდან მის წარგზავნამდე <span class="acc-date">(21-26 ნოემბერი, ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ანგელოზთა რა იხილეს შესლვა ყოვლადწმიდისა, დაუკვირდათ, ვითარ ქალწული შევალს წმიდასა შინა წმიდათასა.</p>
+              <p>კიდობანსა მას შჯულისასა ვერ შეეხებოდა ჴელი ყოველთა, ხოლო აქა დღეს ბაგენი ჩუენ მორწმუნეთანი ჴმითა დაუდუმებელითა ესრეთ გაბრიელის თანა ვიტყოდეთ: გიხაროდენ, მიმადლებულო, უფალი შენთანა.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="shoba-qriste">
+            <div class="accordion-header" onclick="toggleAcc(this)">ქრისტეს შობიდან მის წარგზავნამდე <span class="acc-date">(25 დეკ. - 1 იანვ., ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ადიდე, სულო ჩემო, უპატიოსნესი და უდიდებულესი მაღლისა მხედრობათა ქალწული ყოვლადწმიდა ღმრთსმშობელი.</p>
+              <p>ჯერ არს დუმილი, ვინაითგან ვერ შეუძლებთ ღირსებით ქებად შენდა დღეს, ღმრთისმშობელო, ხოლო არავე დავსდუმნეთ შიშისაგან, არამედ მსგავსად შეძლებისა ჩუენისა შევსწიროთ შესხმა, რომლითა გადიდოთ შენ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="tsinadatsueta">
+            <div class="accordion-header" onclick="toggleAcc(this)">წინადაცუეთას <span class="acc-date">(1 იანვარი, ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>შენდამი იხარებს, მიმადლებულო, ყოველი დაბადებული, ანგელოსთა კრებული და კაცთა ნათესავი. ტაძარო სიწმიდასაო, სამოთხეო პირმეტყუელო, ქალწულებისა სიქადულო, რომლისაგან სიტყუა განჴორციელდა და ყრმა იშვა პირველ საუკუნეთა ღმერთი ჩუენი, რომელმან საშოჲ შენი საყდრად გამოაჩინა და მუცელი შენი ცათა უვრცელეს ჰყო. შენდამი იხარებს, მიმადლებულო, ყოველი დაბადებული, დიდება შენდა.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="natlisgheba">
+            <div class="accordion-header" onclick="toggleAcc(this)">ნათლისღებას <span class="acc-date">(6 იანვარი, ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ადიდე, სულო ჩემო, უპატიოსნესი და უდიდებულესი მაღლისა მხედრობათა, ქალწული ღმრთისმშობელი ყოვლადწმიდა.</p>
+              <p>ვერ შემძლებელ ვართ დიდებად შენდა ჯერისაებრ ქუეყანისანი და მოუძლურდებიან ზეცისანი, ღმრთისმშობელო, რამეთუ უზესთაეს იქმენ, შეიწირე სარწმუნოებაჲ ჩუენი, უწყით სიყუარული შენი და ვითარცა ნათელსა ქრისტიანობისასა გადიდებთ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="mirqma">
+            <div class="accordion-header" onclick="toggleAcc(this)">მირქმას <span class="acc-date">(2 თებერვალი, ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>ღმრთსმშობელო ქალწულო, სასოებაო ქრისტიანეთაო, დაგვიფარე, დაგვიცევ და გვაცხოვნე, რამეთუ შენ ზედა დაგვიძს სასოება.</p>
+              <p>წერილთა მიერ შჯულისათა მოგუესწავა ჩუენ მორწმუნეთა, ვითარმედ ყოველი წული პირველ საშოჲსა განმღებელი წმიდა უფლისაჲ იწოდოს. აჰა, დღეს ვიხილეთ ჩუენ პირმშო ზეცით და ქუეყანით და სარწმუნოებით ვადიდებთ.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-period="khareba">
+            <div class="accordion-header" onclick="toggleAcc(this)">ხარებას <span class="acc-date">(25 მარტი, ძვ.სტ.)</span> <span class="acc-arrow">▼</span></div>
+            <div class="accordion-body">
+              <p>აუწყებდით ქუეყანა სიხარულსა დიდსა, აქებდით ზეცისა ღმრთისა დედასა.</p>
+              <p>კიდობანსა მას შჯულისასა ვერ შეეხებოდა ჴელი ყოველთა, ხოლო აქა დღეს ბაგენი, ჩუენ მორწმუნეთანი ჴმითა დაუდუმებელითა ესრეთ გაბრიილისა თანა ვიტყოდეთ: გიხაროდენ, მიმადლებულო, უფალი შენთანა.</p>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
         <p>
           დიდება მამასა და ძესა და წმიდასა სულსა, აწ და მარადის და უკუნითი
           უკუნისამდე, ამინ.
@@ -707,6 +993,84 @@
           behavior: "smooth",
         });
       }
+
+      function toggleGhirs() {
+        const content = document.getElementById("ghirsContent");
+        const btn = document.getElementById("ghirsToggle");
+        content.classList.toggle("show");
+        btn.classList.toggle("open");
+      }
+
+      function toggleAcc(header) {
+        const body = header.nextElementSibling;
+        const arrow = header.querySelector('.acc-arrow');
+        const wasOpen = body.classList.contains('show');
+        body.classList.toggle('show');
+        header.classList.toggle('active');
+      }
+
+      // მართლმადიდებლური აღდგომის გამოთვლა (მეტონის ციკლი, ძველი სტილი + 13 დღე)
+      function getOrthodoxEaster(year) {
+        var a = year % 4;
+        var b = year % 7;
+        var c = year % 19;
+        var d = (19 * c + 15) % 30;
+        var e = (2 * a + 4 * b - d + 34) % 7;
+        var month = Math.floor((d + e + 114) / 31);
+        var day = ((d + e + 114) % 31) + 1;
+        return new Date(year, month - 1, day + 13);
+      }
+
+      // ფიქსირებული თარიღების მიხედვით ავტო-გახსნა (ძველი სტილი + 13 დღე = ახალი სტილი)
+      (function autoOpenByDate() {
+        var now = new Date();
+        var m = now.getMonth() + 1;
+        var d = now.getDate();
+        var year = now.getFullYear();
+
+        var easter = getOrthodoxEaster(year);
+        var today = new Date(year, m - 1, d);
+        var diff = Math.round((today - easter) / (1000 * 60 * 60 * 24));
+
+        var period = null;
+
+        // მოძრავი დღესასწაულები (აღდგომასთან მიმართებით)
+        if (diff === -7) period = 'bzoba';              // ბზობა (აღდგომამდე 7 დღე)
+        else if (diff === -6) period = 'did-orshab';     // დიდი ორშაბათი
+        else if (diff === -5) period = 'did-samshab';    // დიდი სამშაბათი
+        else if (diff === -4) period = 'did-otkhshab';   // დიდი ოთხშაბათი
+        else if (diff === -3) period = 'did-khutshab';   // დიდი ხუთშაბათი
+        else if (diff === -2) period = 'did-paraskev';   // დიდი პარასკევი
+        else if (diff === -1) period = 'did-shabat';     // დიდი შაბათი
+        else if (diff >= 0 && diff <= 38) period = 'aghdgoma';   // აღდგომიდან ამაღლებამდე
+        else if (diff >= 39 && diff <= 48) period = 'amagleba';  // ამაღლებიდან სულთმოფენობამდე
+        else if (diff >= 49 && diff <= 55) period = 'sultmopen'; // სულთმოფენობიდან ყოველთა წმიდათა კვირიაკემდე
+
+        // ფიქსირებული დღესასწაულები (ახალი სტილით)
+        else if (m === 1 && d >= 7 && d <= 14) period = 'shoba-qriste';
+        else if (m === 1 && d === 14) period = 'tsinadatsueta';
+        else if (m === 1 && d === 19) period = 'natlisgheba';
+        else if (m === 2 && d === 15) period = 'mirqma';
+        else if (m === 4 && d === 7) period = 'khareba';
+        else if (m === 8 && d >= 19 && d <= 27) period = 'feriscvaleba';
+        else if ((m === 8 && d >= 28) || (m === 9 && d <= 7)) period = 'midzineba';
+        else if (m === 9 && d >= 21 && d <= 26) period = 'shoba-ghvtismshobeli';
+        else if ((m === 9 && d >= 27) || (m === 10 && d <= 5)) period = 'juartamagleba';
+        else if (m === 12 && d >= 4 && d <= 9) period = 'tadzrad';
+
+        if (period) {
+          var item = document.querySelector('[data-period="' + period + '"]');
+          if (item) {
+            item.classList.add('current');
+            var header = item.querySelector('.accordion-header');
+            var body = item.querySelector('.accordion-body');
+            if (header && body) {
+              body.classList.add('show');
+              header.classList.add('active');
+            }
+          }
+        }
+      })();
     </script>
   </body>
 </html>
