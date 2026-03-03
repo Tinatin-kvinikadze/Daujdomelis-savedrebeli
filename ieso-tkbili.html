@@ -479,14 +479,15 @@
 
 <b>ლოცვა</b>
 მეუფეო, ღმერთო მამაო, ყოვლისამპყრობელო, უფალო ძეო, მხოლოდშობილო იესო ქრისტე და წმიდაო სულო, ერთო ღვთაებაო, ერთო ძალო, შემიწყალე მე, ცოდვილი, და რომლითაცა მსჯავრითა უწყი, მაცხოვნე მე, უღირსი მონაჲ შენი; რამეთუ კურთხეულ ხარ შენ საუკუნითგან უკუნისამდე, ამინ.
-</pre
-          >
+</pre>
         </div>
       </div>
       <a href="index.html" class="btn-next">← მთავარი გვერდი</a>
     </div>
 
-    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">
+      ↑
+    </button>
 
     <script>
       (function () {
@@ -503,7 +504,10 @@
 
       window.onscroll = function () {
         const btn = document.getElementById("scrollTopBtn");
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
           btn.style.display = "flex";
         } else {
           btn.style.display = "none";

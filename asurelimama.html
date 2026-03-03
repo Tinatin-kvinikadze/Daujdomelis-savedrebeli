@@ -595,7 +595,9 @@
       <a href="index.html" class="btn-next">← მთავარი გვერდი</a>
     </div>
 
-    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">
+      ↑
+    </button>
 
     <script>
       (function () {
@@ -612,7 +614,10 @@
 
       window.onscroll = function () {
         const btn = document.getElementById("scrollTopBtn");
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
           btn.style.display = "flex";
         } else {
           btn.style.display = "none";
