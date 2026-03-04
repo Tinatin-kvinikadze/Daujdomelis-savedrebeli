@@ -677,7 +677,7 @@
       <div class="prayer-text">
         <p class="ghirs-arsi-wrap">
           <em>ღირს არსი...</em>
-          <button class="toggle-btn" id="ghirsToggle" onclick="toggleGhirs()" title="ტექსტის ჩვენება/დამალვა">▼</button>
+          <button class="toggle-btn" id="ghirsToggle" onclick="toggleGhirs()" title="ტექსტის ჩვენება/დამალვა" style="display:none">▼</button>
         </p>
         <div class="ghirs-content" id="ghirsContent">
 
@@ -1076,6 +1076,11 @@
               header.classList.add('active');
             }
           }
+          // ღილაკი გამოჩნდეს მხოლოდ თუ საჩვენებელი ტექსტი არსებობს
+          var ghirsBtn = document.getElementById('ghirsToggle');
+          if (ghirsBtn) ghirsBtn.style.display = '';
+        } else {
+          // არაფერია საჩვენებელი — ღილაკი დამალული რჩება
         }
       })();
     </script>
