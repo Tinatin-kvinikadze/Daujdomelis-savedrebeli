@@ -31,11 +31,24 @@
 
       .nav-header {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
         margin-bottom: 25px;
         padding-bottom: 15px;
         border-bottom: 2px solid #e2e8f0;
+      }
+
+      .nav-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .nav-header h1 {
+        margin-bottom: 0;
+        flex: 1;
+        text-align: center;
       }
 
       .btn-nexts {
@@ -91,7 +104,7 @@
         color: #b8860b;
         font-size: 2.2em;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 0;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       }
 
@@ -203,13 +216,15 @@
   <body>
     <div class="container">
       <div class="nav-header">
-        <a href="index.html" class="nav-btn">
-          <span style="color: white; font-size: 20px">←</span>
-        </a>
-        <h1>✦ფსალმუნნი✦</h1>
-        <a href="sagamo.html" class="nav-btn">
-          <span style="color: white; font-size: 20px">→</span>
-        </a>
+        <div class="nav-row">
+          <a href="index.html" class="nav-btn">
+            <span style="color: white; font-size: 20px">←</span>
+          </a>
+          <h1>☦ ფსალმუნნი ☦</h1>
+          <a href="sagamo.html" class="nav-btn">
+            <span style="color: white; font-size: 20px">→</span>
+          </a>
+        </div>
       </div>
 
       <div class="psalm-section">
