@@ -31,31 +31,51 @@
 
       .nav-header {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
-        padding: 15px 0;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
         border-bottom: 2px solid #e2e8f0;
       }
 
+      .nav-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
+      }
+
+      .nav-header h1 {
+        margin-bottom: 0;
+        flex: 1;
+        text-align: center;
+      }
+
       .nav-btn {
-        width: 45px;
-        height: 45px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-        border: none;
+        border: 2px solid rgba(184, 134, 11, 0.5);
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
         text-decoration: none;
+        flex-shrink: 0;
       }
 
       .nav-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        transform: scale(1.12);
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        border-color: #b8860b;
+      }
+
+      .nav-btn:active {
+        transform: scale(0.95);
       }
 
       .btn-nexts {
@@ -91,33 +111,33 @@
 
       h1 {
         color: #b8860b;
-        font-size: 2.2em;
+        font-size: 1.6em;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 0;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       }
 
       .prayer-section {
         background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
         border-radius: 12px;
-        padding: 18px;
-        margin-bottom: 18px;
+        padding: 10px;
+        margin-bottom: 12px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
 
       .prayer-title {
         color: #2d3748;
-        font-size: 1.25em;
+        font-size: 1.1em;
         font-weight: bold;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         text-align: center;
-        padding-bottom: 8px;
+        padding-bottom: 5px;
         border-bottom: 2px solid rgba(255, 255, 255, 0.5);
       }
 
       .prayer-text {
         background: white;
-        padding: 16px;
+        padding: 10px;
         border-radius: 10px;
         border-left: 4px solid #b8860b;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -125,7 +145,7 @@
       }
 
       .prayer-text p {
-        margin-bottom: 10px;
+        margin-bottom: 6px;
       }
 
       .prayer-text br {
@@ -220,14 +240,13 @@
   <body>
     <div class="container">
       <div class="nav-header">
-        <a href="fsalmuni.html" class="nav-btn">
-          <span style="color: white; font-size: 20px">←</span>
-        </a>
-        <div>
-          <div class="cross-ico☦n"></div>
-          <h1>საღამოს ლოცვანი</h1>
+        <div class="nav-row">
+          <a href="fsalmuni.html" class="nav-btn">
+            <span style="color: white; font-size: 18px; font-weight: bold;">&#10094;</span>
+          </a>
+          <h1>  საღამოს ლოცვანი</h1>
+          <div style="width: 36px"></div>
         </div>
-        <div style="width: 45px"></div>
       </div>
 
       <div class="prayer-section">
