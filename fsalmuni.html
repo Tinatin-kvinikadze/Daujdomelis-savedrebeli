@@ -33,8 +33,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
         border-bottom: 2px solid #e2e8f0;
       }
 
@@ -43,6 +43,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        padding: 0 10px;
       }
 
       .nav-header h1 {
@@ -68,6 +69,7 @@
         font-size: 1.1em;
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        margin: 0 15px;
       }
 
       .btn-next:hover {
@@ -76,23 +78,29 @@
       }
 
       .nav-btn {
-        width: 30px;
-        height: 30px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-        border: none;
+        border: 2px solid rgba(184, 134, 11, 0.5);
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
         text-decoration: none;
+        flex-shrink: 0;
       }
 
       .nav-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        transform: scale(1.12);
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        border-color: #b8860b;
+      }
+
+      .nav-btn:active {
+        transform: scale(0.95);
       }
 
       .nav-btn img {
@@ -102,7 +110,7 @@
 
       h1 {
         color: #b8860b;
-        font-size: 2.2em;
+        font-size: 1.6em;
         text-align: center;
         margin-bottom: 0;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -162,9 +170,9 @@
       .scroll-top {
         position: fixed;
         bottom: 30px;
-        right: 30px;
-        width: 55px;
-        height: 55px;
+        right: 10px;
+        width: 45px;
+        height: 45px;
         background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
         border: none;
         border-radius: 50%;
@@ -187,9 +195,11 @@
       .nav-bottom {
         display: flex;
         justify-content: center;
-        gap: 10px;
+        align-items: center;
+        gap: 15px;
         margin-top: 30px;
         padding-top: 20px;
+        padding-bottom: 20px;
         border-top: 2px solid #e2e8f0;
       }
 
@@ -217,12 +227,9 @@
     <div class="container">
       <div class="nav-header">
         <div class="nav-row">
-          <a href="index.html" class="nav-btn">
-            <span style="color: white; font-size: 20px">←</span>
-          </a>
           <h1>☦ ფსალმუნნი ☦</h1>
           <a href="sagamo.html" class="nav-btn">
-            <span style="color: white; font-size: 20px">→</span>
+            <span style="color: white; font-size: 18px; font-weight: bold;">&#10095;</span>
           </a>
         </div>
       </div>
@@ -415,9 +422,9 @@
             დიდება მამასა და ძესა და წმიდასა სულსა, აწ და მარადის და უკუნითი
             უკუნისამდე, ამინ.
           </p>
-          <br />
+  
           <p>უფალო, შეგვიწყალენ. (3-ჯერ)</p>
-          <br />
+     
           <p>
             უფალო, იესუ ქრისტე, ძეო ღმრთისაო, ლოცვითა ყოვლად წმიდისა დედისა
             შენისათა, ღირსთა და ღმერთშემოსილთა მამათა ჩვენთათა და ყოველთა
@@ -427,14 +434,9 @@
       </div>
 
       <div class="nav-bottom">
-        <a href="index.html" class="nav-btn" style="margin-bottom: 15px">
-          <span style="color: white; font-size: 20px">←</span>
-        </a>
-        <div class="btn-nexts">
-          <a href="sagamo.html" class="btn-next" style="margin-right: 35px"
-            >საღამოს ლოცვა</a
-          ><br /><br />
-        </div>
+        
+        <a href="sagamo.html" class="btn-next">საღამოს ლოცვა</a>
+      
       </div>
     </div>
 
