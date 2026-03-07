@@ -710,10 +710,10 @@
 
       <div class="prayer-text">
         <p class="ghirs-arsi-wrap">
-          <em>ღირს არსი...</em>
-          <button class="toggle-btn" id="ghirsToggle" onclick="toggleGhirs()" title="ტექსტის ჩვენება/დამალვა" style="display:none">▼</button>
+          <em id="ghirsText">ღირს არს ჭეშმარიტად, რათა გადიდებდეთ შენ, ღვთისმშობელო, რომელი მარადის სანატრელ იქმენ, ყოვლადუბიწოდ და დედად ღმრთისა ჩვენისა. უპატიოსნესსა ქერუბიმთასა და 
+            აღმატებით უზესთაესსა სერაბიმთასა, განუხრწნელად მშობელსა სიტყვისა ღმრთისასა, მხოლოსა ღმრთისმშობელსა გალობით ვადიდებდეთ!</em>
         </p>
-        <div class="ghirs-content" id="ghirsContent">
+        <div class="ghirs-content" id="ghirsContent" style="display:none;">
 
           <div class="accordion-item" data-period="bzoba">
             <div class="accordion-header" onclick="toggleAcc(this)">ბზობის კვირას <span class="acc-arrow">▼</span></div>
@@ -1102,19 +1102,15 @@
         if (period) {
           var item = document.querySelector('[data-period="' + period + '"]');
           if (item) {
-            item.classList.add('current');
-            var header = item.querySelector('.accordion-header');
             var body = item.querySelector('.accordion-body');
-            if (header && body) {
-              body.classList.add('show');
-              header.classList.add('active');
+            if (body) {
+              // ავტომატურად შეიცვალოს "ღირს არს" ტექსტი კალენდარული ტექსტით
+              var ghirsText = document.getElementById('ghirsText');
+              if (ghirsText) {
+                ghirsText.innerHTML = body.innerHTML;
+              }
             }
           }
-          // ღილაკი გამოჩნდეს მხოლოდ თუ საჩვენებელი ტექსტი არსებობს
-          var ghirsBtn = document.getElementById('ghirsToggle');
-          if (ghirsBtn) ghirsBtn.style.display = '';
-        } else {
-          // არაფერია საჩვენებელი — ღილაკი დამალული რჩება
         }
       })();
     </script>
