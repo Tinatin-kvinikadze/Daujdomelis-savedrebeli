@@ -171,20 +171,66 @@
         text-align: center;
       }
 
+      .memorial-section {
+        background: linear-gradient(135deg, #f6fbf4 0%, #edf6e7 100%);
+        border: 1px solid rgba(184, 134, 11, 0.28);
+      }
+
+      .memorial-layout {
+        display: block;
+      }
+
+      .memorial-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 10px;
+      }
+
+      .memorial-content {
+        color: #2d3748;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      .memorial-content p {
+        margin-bottom: 10px;
+      }
+
+      .memorial-content p:last-child {
+        margin-bottom: 0;
+      }
+
+      .memorial-opening {
+        color: inherit;
+        font-weight: bold;
+        flex: 1;
+        margin-bottom: 0;
+        line-height: 1.75;
+      }
+
       .patriarch-image {
-        float: left;
-        margin: 5px -11px 15px 1px;
-        width: 150px;
+        flex-shrink: 0;
+        margin: 2px 0 0;
+        width: 128px;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border: 2px solid rgba(184, 134, 11, 0.25);
       }
 
       @media (max-width: 480px) {
+        .memorial-header {
+          gap: 10px;
+          margin-bottom: 8px;
+        }
+
         .patriarch-image {
-          display: block;
-          margin: 9px 4px 0px -14px;
-          width: 112px;
+          width: 96px;
+        }
+
+        .memorial-opening {
+          line-height: 1.6;
         }
       }
 
@@ -440,28 +486,47 @@
         </div>
       </div>
 
-      <div class="psalm-section ">
-        <div class="psalm-text">
-          <img src="images/patriarch.jpg" alt="პატრიარქი ილია II" class="patriarch-image">
-          <p><b> დიდება მამასა და ძესა და წმიდასა სულსა...<br>
-            განუსვენე ქრისტე ღმერთო, სულისა გარდაცვალებულისა მონისა შენისა  უწმინდესისა და უნეტარესისა სრულიად საქართველოს კათოლიკოს პატრიარქისა ილია II-სა.
-           <p>განუსვენე მას, სადა იგი მიხედავს ნათელი პირისა შენისა, სადა იგი არ არს ჭირი, მწუხარება, არა ურვა, არცა სულთქმა, 
-          არამედ სიხარული და ცხოვრება იგი დაუსრულებელი და მიუტევე მას ყოველი შეცოდებანი მისნი და მიეც მას საუკუნო ხსენება... აწ და მარადის და უკუნითი უკუნისამდე, ამინ.
-         </p>
-</p>
-          <p>უფალო, შეგვიწყალენ. (3-ჯერ)</p>
+      <div class="psalm-section memorial-section">
+        <div class="psalm-text memorial-layout">
+          <div class="memorial-content">
+            <div class="memorial-header">
+              <img
+                src="images/patriarch.jpg"
+                alt="პატრიარქი ილია II"
+                class="patriarch-image"
+              />
+              <p class="memorial-opening">
+                დიდება მამასა და ძესა და წმიდასა სულსა...<br />
+                განუსვენე ქრისტე ღმერთო, სულისა გარდაცვალებულისა მონისა შენისა
+                უწმინდესისა და უნეტარესისა სრულიად საქართველოს კათოლიკოს
+                პატრიარქისა ილია II-სა.
+              </p>
+            </div>
 
-          <p>
-            უფალო, იესუ ქრისტე, ძეო ღმრთისაო, ლოცვითა ყოვლად წმიდისა დედისა
-            შენისათა, ღირსთა და ღმერთშემოსილთა მამათა ჩვენთათა და ყოველთა
-            წმიდათა შენთათა, შეგვიწყალენ ჩვენ, ამინ.
-           </b></p>
+            <p>
+              განუსვენე მას, სადა იგი მიხედავს ნათელი პირისა შენისა, სადა იგი არ
+              არს ჭირი, მწუხარება, არა ურვა, არცა სულთქმა, არამედ სიხარული და
+              ცხოვრება იგი დაუსრულებელი და მიუტევე მას ყოველი შეცოდებანი მისნი
+              და მიეც მას საუკუნო ხსენება... აწ და მარადის და უკუნითი
+              უკუნისამდე, ამინ.
+            </p>
+
+            <p>უფალო, შეგვიწყალენ. (3-ჯერ)</p>
+
+            <p>
+              უფალო, იესუ ქრისტე, ძეო ღმრთისაო, ლოცვითა ყოვლად წმიდისა დედისა
+              შენისათა, ღირსთა და ღმერთშემოსილთა მამათა ჩვენთათა და ყოველთა
+              წმიდათა შენთათა, შეგვიწყალენ ჩვენ, ამინ.
+            </p>
+          </div>
         </div>
       </div>
 
       <div class="nav-bottom">
         <a href="index.html" class="nav-btn">
-          <span style="color: white; font-size: 18px; font-weight: bold;">&#10094;</span>
+          <span style="color: white; font-size: 18px; font-weight: bold"
+            >&#10094;</span
+          >
         </a>
         <a href="sagamo.html" class="btn-next">საღამოს ლოცვა</a>
       </div>
