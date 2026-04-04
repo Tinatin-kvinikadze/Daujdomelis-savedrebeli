@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>საღამოს ლოცვანი</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap");
       * {
         margin: 0;
         padding: 0;
@@ -254,6 +254,40 @@
           padding: 14px;
         }
       }
+
+      .font-controls {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .font-label {
+        font-size: 0.85em;
+        color: #718096;
+        margin-right: 2px;
+      }
+
+      .font-btn {
+        width: 34px;
+        height: 34px;
+        border: 1px solid rgba(184, 134, 11, 0.4);
+        border-radius: 8px;
+        background: rgba(184, 134, 11, 0.1);
+        color: #b8860b;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+
+      .font-btn:hover {
+        background: rgba(184, 134, 11, 0.28);
+      }
     </style>
   </head>
   <body>
@@ -268,6 +302,12 @@
           <h1>საღამოს ლოცვანი</h1>
           <div style="width: 36px"></div>
         </div>
+      </div>
+
+      <div class="font-controls">
+        <span class="font-label">ფონტი:</span>
+        <button class="font-btn" onclick="adjustFont(-1)" title="შამცირე">A−</button>
+        <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">A+</button>
       </div>
 
       <div class="prayer-section">
@@ -585,20 +625,23 @@
     </button>
 
     <script>
-      window.onscroll = function () {
+      window.addEventListener("scroll", function () {
         const btn = document.getElementById("scrollTopBtn");
-        if (
-          document.body.scrollTop > 300 ||
-          document.documentElement.scrollTop > 300
-        ) {
-          btn.style.display = "flex";
-        } else {
-          btn.style.display = "none";
-        }
-      };
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        btn.style.display = scrollTop > 300 ? "flex" : "none";
+      });
 
       function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      let currentFontSize = 17;
+      function adjustFont(delta) {
+        currentFontSize = Math.min(26, Math.max(14, currentFontSize + delta));
+        document.querySelectorAll(".content, .prayer-text, .psalm-text").forEach(function(el) {
+          el.style.fontSize = currentFontSize + "px";
+        });
       }
     </script>
   </body>
