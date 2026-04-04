@@ -306,8 +306,12 @@
 
       <div class="font-controls">
         <span class="font-label">ფონტი:</span>
-        <button class="font-btn" onclick="adjustFont(-1)" title="შამცირე">A−</button>
-        <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">A+</button>
+        <button class="font-btn" onclick="adjustFont(-1)" title="შამცირე">
+          A−
+        </button>
+        <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">
+          A+
+        </button>
       </div>
 
       <div class="prayer-section">
@@ -627,7 +631,8 @@
     <script>
       window.addEventListener("scroll", function () {
         const btn = document.getElementById("scrollTopBtn");
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
 
         btn.style.display = scrollTop > 300 ? "flex" : "none";
       });
@@ -639,9 +644,11 @@
       let currentFontSize = 17;
       function adjustFont(delta) {
         currentFontSize = Math.min(26, Math.max(14, currentFontSize + delta));
-        document.querySelectorAll(".content, .prayer-text, .psalm-text").forEach(function(el) {
-          el.style.fontSize = currentFontSize + "px";
-        });
+        document
+          .querySelectorAll(".content, .prayer-text, .psalm-text")
+          .forEach(function (el) {
+            el.style.fontSize = currentFontSize + "px";
+          });
       }
     </script>
   </body>
