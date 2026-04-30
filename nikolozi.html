@@ -252,7 +252,9 @@
         border-radius: 8px;
         object-fit: cover;
         border: 2px solid #b8860b;
-        box-shadow: 0 0 0 1px rgba(184,134,11,0.3), 0 3px 10px rgba(0,0,0,0.25);
+        box-shadow:
+          0 0 0 1px rgba(184, 134, 11, 0.3),
+          0 3px 10px rgba(0, 0, 0, 0.25);
         background: #f5f0e0;
         flex-shrink: 0;
       }
@@ -275,11 +277,20 @@
       </header>
 
       <div class="font-controls">
-        <img src="images/nikolozi.jpg" alt="წმ. ნიკოლოზი" class="header-icon" style="margin-left: 12px;">
+        <img
+          src="images/nikolozi.jpg"
+          alt="წმ. ნიკოლოზი"
+          class="header-icon"
+          style="margin-left: 12px"
+        />
         <div class="font-controls-right">
           <span class="font-label">ფონტი:</span>
-          <button class="font-btn" onclick="adjustFont(-1)" title="შამცირე">A−</button>
-          <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">A+</button>
+          <button class="font-btn" onclick="adjustFont(-1)" title="შამცირე">
+            A−
+          </button>
+          <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">
+            A+
+          </button>
         </div>
       </div>
 
