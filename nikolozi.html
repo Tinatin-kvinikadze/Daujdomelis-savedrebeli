@@ -162,6 +162,11 @@
         .content {
           font-size: 17px;
         }
+
+        .header-icon {
+          width: 98px;
+          height: 128px;
+        }
       }
 
       .scroll-top {
@@ -206,32 +211,50 @@
 
       .font-controls {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         gap: 8px;
         margin-bottom: 12px;
       }
 
+      .font-controls-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+
       .font-label {
-        font-size: 0.85em;
+        font-size: 0.95em;
         color: #718096;
         margin-right: 2px;
       }
 
       .font-btn {
-        width: 34px;
-        height: 34px;
+        width: 42px;
+        height: 42px;
         border: 1px solid rgba(184, 134, 11, 0.4);
         border-radius: 8px;
         background: rgba(184, 134, 11, 0.1);
         color: #b8860b;
-        font-size: 1em;
+        font-size: 1.15em;
         font-weight: bold;
         cursor: pointer;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         transition: background 0.2s;
+      }
+
+      .header-icon {
+        width: 108px;
+        height: 168px;
+        border-radius: 8px;
+        object-fit: cover;
+        border: 2px solid #b8860b;
+        box-shadow: 0 0 0 1px rgba(184,134,11,0.3), 0 3px 10px rgba(0,0,0,0.25);
+        background: #f5f0e0;
+        flex-shrink: 0;
       }
 
       .font-btn:hover {
@@ -252,13 +275,12 @@
       </header>
 
       <div class="font-controls">
-        <span class="font-label">ფონტი:</span>
-        <button class="font-btn" onclick="adjustFont(-1)" title="შამცირე">
-          A−
-        </button>
-        <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">
-          A+
-        </button>
+        <img src="images/nikolozi.jpg" alt="წმ. ნიკოლოზი" class="header-icon" style="margin-left: 12px;">
+        <div class="font-controls-right">
+          <span class="font-label">ფონტი:</span>
+          <button class="font-btn" onclick="adjustFont(-1)" title="შამცირე">A−</button>
+          <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">A+</button>
+        </div>
       </div>
 
       <div class="section">
