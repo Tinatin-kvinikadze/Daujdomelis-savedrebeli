@@ -222,6 +222,71 @@
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
       }
 
+      /* Featured giorgi card */
+      .giorgi-featured {
+        margin-bottom: 20px;
+      }
+
+      .giorgi-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 55%, #b8860b 100%);
+        padding: 12px 22px;
+        border-radius: 16px;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0 6px 20px rgba(46, 125, 50, 0.45), 0 2px 8px rgba(0, 0, 0, 0.18);
+        border: 1px solid rgba(184, 134, 11, 0.45);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .giorgi-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, transparent 55%);
+        pointer-events: none;
+      }
+
+      .giorgi-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px rgba(46, 125, 50, 0.55), 0 4px 12px rgba(0, 0, 0, 0.22);
+      }
+
+      .giorgi-icon {
+        font-size: 2em;
+        flex-shrink: 0;
+        opacity: 0.92;
+      }
+
+      .giorgi-text {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .giorgi-title {
+        font-size: 1.15em;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+      }
+
+      .giorgi-sub {
+        font-size: 0.8em;
+        opacity: 0.78;
+        margin-top: 3px;
+        font-weight: 400;
+      }
+
+      .giorgi-arrow {
+        font-size: 1.5em;
+        opacity: 0.65;
+        flex-shrink: 0;
+      }
+
       .names-list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -562,6 +627,17 @@
             <a href="miqaeli.html">წმ. მთავარანგელოზისა მიქაელისა</a>
           </div>
         </details>
+      </div>
+
+      <div class="giorgi-featured">
+        <a href="giorgi.html" class="giorgi-card">
+          <span class="giorgi-icon">☦</span>
+          <span class="giorgi-text">
+            <span class="giorgi-title">წმინდა გიორგის</span>
+            <span class="giorgi-sub">დაუჯდომელი</span>
+          </span>
+          <span class="giorgi-arrow">›</span>
+        </a>
       </div>
       <!-- <div class="prayer-links" style="margin-top: -25px;">
         <a href="itire.html" class="prayer-list" style="font-size: 1.1em; padding: 16px 20px; font-weight: bold; width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none; color: #2d3748;">იტირე სულო</a>
