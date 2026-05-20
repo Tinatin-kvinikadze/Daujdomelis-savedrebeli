@@ -6,108 +6,216 @@
     <title>დაუჯდომელი წმ. გიორგისა</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap");
-      * { margin: 0; padding: 0; box-sizing: border-box; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       body {
         font-family: "Noto Serif Georgian", Georgia, serif;
         background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-        min-height: 100vh; padding: 8px; color: #2d3748; line-height: 1.8;
+        min-height: 100vh;
+        padding: 8px;
+        color: #2d3748;
+        line-height: 1.8;
       }
       .container {
-        max-width: 900px; margin: 0 auto;
+        max-width: 900px;
+        margin: 0 auto;
         background: rgba(255, 255, 255, 0.95);
-        border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 30px;
       }
       header {
-        position: relative; display: flex; align-items: center; justify-content: center;
-        min-height: 42px; margin-bottom: 14px; padding: 6px 12px 6px 48px;
-        border-radius: 14px; border: 1px solid rgba(184,134,11,0.25);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        margin-bottom: 14px;
+        padding: 6px 12px 6px 48px;
+        border-radius: 14px;
+        border: 1px solid rgba(184, 134, 11, 0.25);
         background: linear-gradient(135deg, #f5f9f0 0%, #f0f5e8 100%);
-        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
       }
       .top-back {
-        position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
-        display: inline-flex; align-items: center; justify-content: center;
-        width: 34px; height: 34px; border-radius: 10px; text-decoration: none;
-        font-size: 20px; font-weight: bold; color: white;
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
         background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
       }
       .header-title {
-        color: #b8860b; font-size: 1.05em; font-weight: bold;
-        text-align: center; text-shadow: 1px 1px 3px rgba(0,0,0,0.12);
-        line-height: 1.35; flex: 1;
+        color: #b8860b;
+        font-size: 1.05em;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+        line-height: 1.35;
+        flex: 1;
       }
       .section {
         background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-        border-radius: 15px; padding: 10px; margin-bottom: 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
       .prayer-text {
         background: linear-gradient(180deg, #ffffff 0%, #fffdf8 100%);
-        padding: 24px 20px; border-radius: 10px;
+        padding: 24px 20px;
+        border-radius: 10px;
         border-left: 4px solid #b8860b;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-size: 18px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        font-size: 18px;
       }
       .content {
-        white-space: pre-line; margin: 0; font-family: inherit;
-        font-size: 18px; color: #2d3748;
+        white-space: pre-line;
+        margin: 0;
+        font-family: inherit;
+        font-size: 18px;
+        color: #2d3748;
       }
       .font-controls {
-        display: flex; justify-content: flex-end; gap: 8px;
-        margin-bottom: 12px; align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-bottom: 12px;
+        align-items: center;
       }
-      .font-controls-right { display: flex; flex-direction: row; align-items: center; gap: 6px; }
-      .font-label { font-size: 0.95em; color: #718096; }
+      .font-controls-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+      }
+      .font-label {
+        font-size: 0.95em;
+        color: #718096;
+      }
       .font-btn {
-        width: 42px; height: 42px; border: 1px solid rgba(184,134,11,0.4);
-        border-radius: 8px; background: rgba(184,134,11,0.1); color: #b8860b;
-        font-size: 1.15em; font-weight: bold; cursor: pointer;
-        display: inline-flex; align-items: center; justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(184, 134, 11, 0.4);
+        border-radius: 8px;
+        background: rgba(184, 134, 11, 0.1);
+        color: #b8860b;
+        font-size: 1.15em;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         transition: background 0.2s;
       }
-      .font-btn:hover { background: rgba(184,134,11,0.28); }
-      .nav-bottom { text-align: center; padding: 20px 0 10px; }
+      .font-btn:hover {
+        background: rgba(184, 134, 11, 0.28);
+      }
+      .nav-bottom {
+        text-align: center;
+        padding: 20px 0 10px;
+      }
       .btn-next {
         background: linear-gradient(135deg, #2e7d32 0%, #b8860b 100%);
-        padding: 16px 20px; border-radius: 15px; text-decoration: none;
-        color: white; font-weight: bold; font-size: 1.05em;
-        transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        padding: 16px 20px;
+        border-radius: 15px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.05em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         display: inline-block;
       }
-      .btn-next:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
-      .scroll-top {
-        position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px;
-        background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-        border: none; border-radius: 50%; color: white; font-size: 24px;
-        cursor: pointer; display: none; align-items: center; justify-content: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: all 0.3s ease; z-index: 1000;
+      .btn-next:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
       }
-      .scroll-top:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 55px;
+        height: 55px;
+        background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+      .scroll-top:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
       @media (max-width: 768px) {
-        .container { padding: 2px; }
-        .top-back { width: 30px; height: 30px; font-size: 18px; left: 10px; }
-        header { min-height: 40px; padding: 6px 10px 6px 44px; }
-        .prayer-text { padding: 18px 14px; }
-        .content { font-size: 17px; }
+        .container {
+          padding: 2px;
+        }
+        .top-back {
+          width: 30px;
+          height: 30px;
+          font-size: 18px;
+          left: 10px;
+        }
+        header {
+          min-height: 40px;
+          padding: 6px 10px 6px 44px;
+        }
+        .prayer-text {
+          padding: 18px 14px;
+        }
+        .content {
+          font-size: 17px;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <header>
-        <a href="index.html" class="top-back" aria-label="მავარ გვერდზე დაბრუნება">&#8592;</a>
+        <a
+          href="index.html"
+          class="top-back"
+          aria-label="მავარ გვერდზე დაბრუნება"
+          >&#8592;</a
+        >
         <span class="header-title">დაუჯდომელი<br />წმ. გიორგისა</span>
       </header>
       <div class="font-controls">
         <div class="font-controls-right">
           <span class="font-label">ფონტი:</span>
-          <button class="font-btn" onclick="adjustFont(-1)" title="ამცირე">A&#8722;</button>
-          <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">A+</button>
+          <button class="font-btn" onclick="adjustFont(-1)" title="ამცირე">
+            A&#8722;
+          </button>
+          <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">
+            A+
+          </button>
         </div>
       </div>
       <div class="section">
         <div class="prayer-text">
-          <pre class="content">ლოცვითა წმიდათა მამათა ჩუენთათა, უფალო იესუ ქრისტე, ღმერთო ჩუენო, შეგვიწყალენ ჩუენ. ამინ.
+          <pre class="content">
+ლოცვითა წმიდათა მამათა ჩუენთათა, უფალო იესუ ქრისტე, ღმერთო ჩუენო, შეგვიწყალენ ჩუენ. ამინ.
 დიდებაჲ შენდა, ღმერთო ჩუენო, დიდებაჲ შენდა!
 
 ქრისტე აღსდგა მკვდრეთით სიკვდილითა სიკვდილისა დამთრგუნველი და საფლავების შინათა ცხოვრების მიმნიჭებელი. (სამ გზის)
@@ -370,32 +478,43 @@
 ლოცვა წმიდისა გიორგისადმი
 ჰოი, ყოვლადდიდებულო ღმრთივგვირგვინოსანო მოწამეო გიორგი, ანგელოსთა თანა შეერთებულო, მოციქულთა თანა პატივცემულო, მოწამეთა სრულებაო, მამათა დიდებაო, ქალწულთა შუენიერებაო, მვედრებელთა ყოველთა მსწარფლშემწეო, თხოვათა აღმასრულებელო და წყალობისა მომნიჭებელო; ჰოი, ყოვლადბრწყინვალეო ქრისტეს მოწამეო გიორგი, ბრწყინვალებითა ელვარებისა სიწმიდისა შენისათა განაბრწყინვე და დაიფარე ღმრთივდაცული ერი ჩუენი და მეუფებაჲ მისი, საქართველოს წმიდაჲ ეკლესიაჲ, ჩხოროწყუსა და სენაკის მიტროპოლიტი - მეუფე შიო, ყოვლადსამღვდელონი მიტროპოლიტნი, მთავარეპისკოპოსნი, ეპისკოპოსნი და ყოველნი სამღვდელონი და სამონაზვნონი დასნი და ყოველნი მართლმადიდებელნი ქრისტიანენი.
 ევედრე, წმიდაო მოწამეო ქრისტესო, შენგან შეყუარებულსა ტკბილსა იესუს, რათა მოგუანიჭოს მადლი და წყალობა თვისი აღურაცხელი; ჰოი, ყოველადქებულო და პატივცემულო წმიდაო მოწამეო გიორგი, ღმრთივდიდებულითა საკვირველებითა და ნიშებ-სასწაულებითა შენითა განათავისუფლენ ტყუენი, განკურნენ უძლურნი, გამოიხსენ განსაცდელსა შინა მყოფნი, განარინენ ზღუასა შინა მავალნი, მოაქციენ ცოდვილნი და შეაწყნარენ ქრისტესა ღმერთსა, ყოველთა შემწყნარებელსა და ყოველნი მადიდებელნი წმიდისა სახელისა შენისანი ადიდენ და აღამაღლენ სულითა და ხორცით, რაჲთა სასუფეველისა დიდებასა და დიდადშუენიერსა ბრწყინვალებასა ღმრთისასა ღირს ვიქმნეთ ყოველნი, ანგელოსთა თანა ვუგალობდეთ, წმიდათა თანა ვადიდებდეთ და შენ თანა გვირგვინოსანნი ვაკურთხებდეთ შენსა გვირგვინოსანმყოფელსა მამასა, შენსა განმაძლიერებელსა ძესა და შენ შორის მეტყუელსა სულსა წმიდასა, რომელსა შუენის ყოველი დიდებაჲ, პატივი და თაყუანისცემაჲ აწ და მარადის და უკუნითი უკუნისამდე, ამინ.
-</pre>
+</pre
+          >
         </div>
       </div>
       <div class="nav-bottom">
         <a href="index.html" class="btn-next">&#8592; მთავარი გვერდი</a>
       </div>
     </div>
-    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">&#8593;</button>
+    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">
+      &#8593;
+    </button>
     <script>
       (function () {
-        var h = /(^|<br\s*\/?>|\n)\s*((?:ფსალმუნი\s+\d+|ტროპარი[^<\n]*|კონდაკი(?:\s+\d+)?|იკოსი\s+\d+|ლოცვა[^<\n]*))(?=\s*(?:<br\s*\/?>|\n|$))/g;
+        var h =
+          /(^|<br\s*\/?>|\n)\s*((?:ფსალმუნი\s+\d+|ტროპარი[^<\n]*|კონდაკი(?:\s+\d+)?|იკოსი\s+\d+|ლოცვა[^<\n]*))(?=\s*(?:<br\s*\/?>|\n|$))/g;
         document.querySelectorAll(".prayer-text").forEach(function (b) {
           b.innerHTML = b.innerHTML.replace(h, "$1<strong>$2</strong>");
         });
       })();
       window.addEventListener("scroll", function () {
         var btn = document.getElementById("scrollTopBtn");
-        btn.style.display = (document.documentElement.scrollTop || document.body.scrollTop) > 300 ? "flex" : "none";
+        btn.style.display =
+          (document.documentElement.scrollTop || document.body.scrollTop) > 300
+            ? "flex"
+            : "none";
       });
-      function scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); }
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
       var currentFontSize = 18;
       function adjustFont(delta) {
         currentFontSize = Math.min(26, Math.max(14, currentFontSize + delta));
-        document.querySelectorAll(".content, .prayer-text").forEach(function (el) {
-          el.style.fontSize = currentFontSize + "px";
-        });
+        document
+          .querySelectorAll(".content, .prayer-text")
+          .forEach(function (el) {
+            el.style.fontSize = currentFontSize + "px";
+          });
       }
     </script>
   </body>
