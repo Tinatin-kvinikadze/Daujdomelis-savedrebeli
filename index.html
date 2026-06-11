@@ -281,6 +281,60 @@
           0 5px 14px rgba(0, 0, 0, 0.25),
           inset 0 1px 0 rgba(255, 235, 150, 0.22);
       }
+      .pantanasa-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: linear-gradient(135deg, #555cbe 0%, #27389b 40%, #2c48a1 72%, #183592 100%);
+        padding: 11px 18px;
+        border-radius: 14px;
+        text-decoration: none;
+        color: white;
+        box-shadow:
+          0 6px 22px rgba(92, 61, 0, 0.52),
+          0 2px 8px rgba(0, 0, 0, 0.22),
+          inset 0 1px 0 rgba(255, 235, 150, 0.28);
+        border: 1.5px solid rgba(212, 175, 55, 0.7);
+        transition: transform 0.28s ease, box-shadow 0.28s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pantanasa-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg,
+          rgba(212, 175, 55, 0.13) 0%,
+          rgba(255, 255, 255, 0.07) 30%,
+          transparent 60%);
+        pointer-events: none;
+      }
+
+      .pantanasa-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+        transform: skewX(-20deg);
+        transition: left 0.6s ease;
+        pointer-events: none;
+      }
+
+      .pantanasa-card:hover::after {
+        left: 130%;
+      }
+
+      .pantanasa-card:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 14px 36px rgba(92, 61, 0, 0.62),
+          0 5px 14px rgba(0, 0, 0, 0.25),
+          inset 0 1px 0 rgba(255, 235, 150, 0.22);
+      }
 
       .giorgi-icon {
         font-size: 1.8em;
@@ -713,6 +767,15 @@
         <a href="petre-pavle.html" class="giorgi-card">
           <span class="giorgi-text">
             <span class="giorgi-title">წმიდა პეტრე და პავლეს</span>
+            <span class="giorgi-sub">დაუჯდომელი</span>
+          </span>
+          <span class="giorgi-arrow">›</span>
+        </a>
+      </div> 
+       <div class="giorgi-featured">
+        <a href="pantanasa.html" class="pantanasa-card">
+          <span class="giorgi-text">
+            <span class="giorgi-title">ყოვლადწმიდა ღვთისმშობლის(პანტანასას)</span>
             <span class="giorgi-sub">დაუჯდომელი</span>
           </span>
           <span class="giorgi-arrow">›</span>
