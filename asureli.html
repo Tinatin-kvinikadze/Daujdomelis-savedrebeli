@@ -127,7 +127,7 @@
       .nav-bottom {
         text-align: center;
         padding: 20px 0 10px;
-        margin-right:15px;
+        margin-right: 15px;
       }
       .header-icon {
         width: 244px;
@@ -595,7 +595,8 @@
       function scrollToTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
-      let currentFontSize = parseInt(localStorage.getItem("fontSize"), 10) || 18;
+      let currentFontSize =
+        parseInt(localStorage.getItem("fontSize"), 10) || 18;
       function applyFontSize() {
         document
           .querySelectorAll(".content, .prayer-text")

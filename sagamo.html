@@ -831,7 +831,8 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
-      let currentFontSize = parseInt(localStorage.getItem("fontSize"), 10) || 17;
+      let currentFontSize =
+        parseInt(localStorage.getItem("fontSize"), 10) || 17;
       function applyFontSize() {
         document
           .querySelectorAll(".content, .prayer-text, .psalm-text")
