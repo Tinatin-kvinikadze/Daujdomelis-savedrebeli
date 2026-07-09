@@ -575,6 +575,40 @@
         margin: 0 5px;
       }
 
+      .font-controls {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .font-label {
+        font-size: 0.85em;
+        color: #718096;
+        margin-right: 2px;
+      }
+
+      .font-btn {
+        width: 34px;
+        height: 34px;
+        border: 1px solid rgba(184, 134, 11, 0.4);
+        border-radius: 8px;
+        background: rgba(184, 134, 11, 0.1);
+        color: #b8860b;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+
+      .font-btn:hover {
+        background: rgba(184, 134, 11, 0.28);
+      }
+
       footer {
         text-align: center;
         margin-top: 40px;
@@ -742,6 +776,15 @@
         <h1>☦ ლოცვანი ☦ </h1>
       </header>
 
+      <div class="font-controls">
+        <button class="font-btn" onclick="adjustFont(-1)" title="შემცირე">
+          A−
+        </button>
+        <button class="font-btn" style="margin-right: 10px;" onclick="adjustFont(1)" title="გაადიდე">
+          A+
+        </button>
+      </div>
+
       <div class="prayer-links">
         <details class="prayer-dropdown">
           <summary>აირჩიეთ დაუჯდომელი</summary>
@@ -856,6 +899,7 @@
           <div class="name-item">ნინო(ფოფოდია)</div>
           <div class="name-item">ქეთევანი(გოგუაძე)</div>
           <div class="name-item">ნინო(შორენა)</div>
+          <div class="name-item">მაია(ინგა)</div>
         </div>
       </div>
 
@@ -1278,6 +1322,21 @@
           behavior: "smooth",
         });
       }
+
+      let currentFontSize = parseInt(localStorage.getItem("fontSize"), 10) || 17;
+      function applyFontSize() {
+        document
+          .querySelectorAll(".content, .prayer-text, .psalm-text")
+          .forEach(function (el) {
+            el.style.fontSize = currentFontSize + "px";
+          });
+      }
+      function adjustFont(delta) {
+        currentFontSize = Math.min(26, Math.max(14, currentFontSize + delta));
+        localStorage.setItem("fontSize", currentFontSize);
+        applyFontSize();
+      }
+      applyFontSize();
 
       function toggleGhirs() {
         const content = document.getElementById("ghirsContent");

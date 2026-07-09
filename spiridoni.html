@@ -618,15 +618,20 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
-      let currentFontSize = 18;
-      function adjustFont(delta) {
-        currentFontSize = Math.min(26, Math.max(14, currentFontSize + delta));
+      let currentFontSize = parseInt(localStorage.getItem("fontSize"), 10) || 18;
+      function applyFontSize() {
         document
           .querySelectorAll(".content, .prayer-text, .psalm-text")
           .forEach(function (el) {
             el.style.fontSize = currentFontSize + "px";
           });
       }
+      function adjustFont(delta) {
+        currentFontSize = Math.min(26, Math.max(14, currentFontSize + delta));
+        localStorage.setItem("fontSize", currentFontSize);
+        applyFontSize();
+      }
+      applyFontSize();
     </script>
   </body>
 </html>
