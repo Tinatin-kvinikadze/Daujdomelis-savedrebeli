@@ -1,12 +1,11 @@
-﻿
-<!doctype html>
+﻿<!doctype html>
 <html lang="ka">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>დაუჯდომელი წმიდა იოანე ნათლისმცემლისა</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;700&display=swap");
       * {
         margin: 0;
         padding: 0;
@@ -51,14 +50,16 @@
         border-radius: 8px;
         object-fit: cover;
         border: 2px solid #b8860b;
-        box-shadow: 0 0 0 1px rgba(184,134,11,0.3), 0 3px 10px rgba(0,0,0,0.25);
+        box-shadow:
+          0 0 0 1px rgba(184, 134, 11, 0.3),
+          0 3px 10px rgba(0, 0, 0, 0.25);
         background: #f5f0e0;
         flex-shrink: 0;
       }
 
       h1 {
         color: #b8860b;
-        font-size: 2.0em;
+        font-size: 2em;
         margin: 0;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
       }
@@ -296,27 +297,38 @@
         padding: 20px 0 10px;
       }
     </style>
-</head>
+  </head>
 
-<body>
-  <div class="container">
-    <header>
-      <a href="index.html" class="top-back" aria-label="მთავარ გვერდზე დაბრუნება">←</a>
-      <span class="header-title">დაუჯდომელი<br />წმ.იოანე ნათლისმცემლისა</span>
-    </header>
+  <body>
+    <div class="container">
+      <header>
+        <a
+          href="index.html"
+          class="top-back"
+          aria-label="მთავარ გვერდზე დაბრუნება"
+          >←</a
+        >
+        <span class="header-title"
+          >დაუჯდომელი<br />წმ.იოანე ნათლისმცემლისა</span
+        >
+      </header>
 
-    <div class="font-controls">
-      <!-- <img src="images/natlismcemeli.jpg" alt="ღვთისმშობელი" class="header-icon" style="margin-left: 12px;"> -->
-      <div class="font-controls-right">
-        <span class="font-label">ფონტი:</span>
-        <button class="font-btn" onclick="adjustFont(-1)" title="შამცირე">A−</button>
-        <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">A+</button>
+      <div class="font-controls">
+        <!-- <img src="images/natlismcemeli.jpg" alt="ღვთისმშობელი" class="header-icon" style="margin-left: 12px;"> -->
+        <div class="font-controls-right">
+          <span class="font-label">ფონტი:</span>
+          <button class="font-btn" onclick="adjustFont(-1)" title="შამცირე">
+            A−
+          </button>
+          <button class="font-btn" onclick="adjustFont(1)" title="გაადიდე">
+            A+
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div class="section">
-      <div class="prayer-text">
-        <pre class="content">
+      <div class="section">
+        <div class="prayer-text">
+          <pre class="content">
 სახელითა მამისაჲთა და ძისათა და სულისა წმიდისაჲთა. ამინ.
 
 უფალო იესუ ქრისტე, ძეო ღმრთისაო, ლოცვითა ყოვლადწმიდისა დედისა შენისაჲთა და ყოველთა წმიდათაჲთა, შეგჳწყალენ. ჩვენ. ამინ.
@@ -615,52 +627,58 @@
 
 ჰოი, უღუაწთა ამათ გონებათა ჩუენთა მომმუშაკებელო და ერქუანითა სინანულისათა გულთა შინა მორწმუნეთათა შთაბეჭდულო კუალო ღმრთისმიერო, ღმრთისა საყდრისა მჭვრეტელმან დაბრმობილნი თუალნი ეგე სულისანი ცათა მიმართ აღგვიხილენ, რაითა მაცხოვნებელსა მას ნათლისღებასა მიმთხუეულნი და ნათლისღებისა მის ბეჭდით ნიშანდებულნი და მისითა მადლითა დღეყოველ ცხორებულნი, ჩუენცა შენ თანა ვუგალობდეთ ნათლისმცემელად თვისად გამომაჩინებელსა შენსა ქრისტესა ღმერთსა, რომელსა შუენის დიდება, პატივი და თაყუანისცემა თანა დაუსაბამოით მამით თვისით და ყოვლადწმიდით, სახიერით და ცხოველისმყოფელით სულით წმიდითურთ, აწ და მარადის და უკუნითი უკუნისამდე, ამინ.
         </pre>
+        </div>
+      </div>
+
+      <div style="text-align: center">
+        <a href="index.html" class="btn-next">← მთავარი გვერდი</a>
       </div>
     </div>
 
-    <div style="text-align: center;">
-      <a href="index.html" class="btn-next">← მთავარი გვერდი</a>
-    </div>
-  </div>
+    <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">
+      ↑
+    </button>
 
-  <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+    <script>
+      (function () {
+        const headingPattern =
+          /(^|<br\s*\/?>|\n)\s*((?:კონდაკი|იკოსი)\s*\d+)(?=\s*(?:<br\s*\/?>|\n|$))/g;
 
-  <script>
-    (function () {
-      const headingPattern =
-        /(^|<br\s*\/?>|\n)\s*((?:კონდაკი|იკოსი)\s*\d+)(?=\s*(?:<br\s*\/?>|\n|$))/g;
+        document.querySelectorAll(".prayer-text").forEach((block) => {
+          block.innerHTML = block.innerHTML.replace(
+            headingPattern,
+            "$1<strong>$2</strong>",
+          );
+        });
+      })();
 
-      document.querySelectorAll(".prayer-text").forEach((block) => {
-        block.innerHTML = block.innerHTML.replace(
-          headingPattern,
-          "$1<strong>$2</strong>",
-        );
+      window.addEventListener("scroll", function () {
+        const btn = document.getElementById("scrollTopBtn");
+        const scrollTop =
+          document.documentElement.scrollTop || document.body.scrollTop;
+
+        btn.style.display = scrollTop > 300 ? "flex" : "none";
       });
-    })();
 
-    window.addEventListener("scroll", function () {
-      const btn = document.getElementById("scrollTopBtn");
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
 
-      btn.style.display = scrollTop > 300 ? "flex" : "none";
-    });
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    let currentFontSize = parseInt(localStorage.getItem("fontSize"), 10) || 17;
-    function applyFontSize() {
-      document.querySelectorAll(".content, .prayer-text, .psalm-text").forEach(function(el) {
-        el.style.fontSize = currentFontSize + "px";
-      });
-    }
-    function adjustFont(delta) {
-      currentFontSize = Math.min(26, Math.max(14, currentFontSize + delta));
-      localStorage.setItem("fontSize", currentFontSize);
+      let currentFontSize =
+        parseInt(localStorage.getItem("fontSize"), 10) || 17;
+      function applyFontSize() {
+        document
+          .querySelectorAll(".content, .prayer-text, .psalm-text")
+          .forEach(function (el) {
+            el.style.fontSize = currentFontSize + "px";
+          });
+      }
+      function adjustFont(delta) {
+        currentFontSize = Math.min(26, Math.max(14, currentFontSize + delta));
+        localStorage.setItem("fontSize", currentFontSize);
+        applyFontSize();
+      }
       applyFontSize();
-    }
-    applyFontSize();
-  </script>
-</body>
+    </script>
+  </body>
 </html>
