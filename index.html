@@ -125,7 +125,9 @@
         background: white;
         border: 1px solid rgba(184, 134, 11, 0.25);
         border-radius: 12px;
-        overflow: hidden;
+        max-height: 330px;
+        overflow-y: auto;
+        overflow-x: hidden;
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
       }
 
@@ -145,6 +147,10 @@
 
       .prayer-list a:hover {
         background: linear-gradient(135deg, #f0f7e6 0%, #e8f5e0 100%);
+      }
+
+      .prayer-list-alt a:nth-child(even) {
+        background: #f0f0f0;
       }
 
       .prayer-link {
@@ -842,7 +848,7 @@
       <div class="prayer-links">
         <details class="prayer-dropdown">
           <summary>აირჩიეთ დაუჯდომელი</summary>
-          <div class="prayer-list">
+          <div class="prayer-list prayer-list-alt">
             
             <a href="miqaeli.html">წმ. მთავარანგელოზისა მიქაელისა</a>
             <a href="spiridoni.html">წმ. სპირიდონისა</a>
@@ -859,6 +865,26 @@
           </div>
         </details>
       </div>
+
+      <div class="prayer-links" style="margin-top: -25px;">
+        <details class="prayer-dropdown">
+          <summary>სხვა დაუჯდომელნი</summary>
+          <div class="prayer-list prayer-list-alt">
+            <a href="pantanasa.html">ყოვლადწმიდა ღვთისმშობლისა (პანტანასას)</a>
+            <a href="abotbileli.html">წმ. დიდისა მოწამისა აბო ტფილელისა</a>
+            <a href="andria.html">წმ. მოციქულისა ანდრია პირველწოდებულისა</a>
+            <a href="asureli.html">წმ. ცამეტი ასურელი მამისა</a>
+            <a href="giorgi.html">წმ. გიორგისა</a>
+            <a href="qetevani.html">წმ. ქეთევანისა</a>
+            <a href="samasi.html">წმიდათა სამასთა არაგველთა</a>
+            <a href="ioane.html">წმ. იოანე ნათლისმცემლისა</a>
+            <a href="shio.html">ღირსისა მამისა შიო მღვიმელისა</a>
+            <a href="tamari.html">წმიდა კეთილმსახური მეფისა თამარისა</a>
+            <a href="petre-pavle.html">წმიდათა მოციქულთა პეტრესი და პავლესი</a>
+            <a href="ioakime.html">წმ. იოაკიმე და ანასი</a>
+          </div>
+        </details>
+      </div>
 <!-- 
        <div class="giorgi-featured">
         <a href="petre-pavle.html" class="giorgi-card">
@@ -869,7 +895,7 @@
           <span class="giorgi-arrow">›</span>
         </a>
       </div>  -->
-       <div class="giorgi-featured">
+       <!-- <div class="giorgi-featured">
         <a href="pantanasa.html" class="pantanasa-card">
           <span class="giorgi-text">
             <span class="giorgi-title">ყოვლადწმიდა ღვთისმშობლის(პანტანასას)</span>
@@ -877,14 +903,14 @@
           </span>
           <span class="giorgi-arrow">›</span>
         </a>
-       <div class="giorgi-featured">
+      <div class="giorgi-featured">
         <a href="natlismcemeli.html" class="pantanasa-card">
           <span class="giorgi-text">
             <span class="giorgi-title">წმ. იოანეს</span>
             <span class="giorgi-sub">დაუჯდომელი</span>
           </span>
           <span class="giorgi-arrow">›</span>
-        </a>
+        </a> -->
         <!-- <div class="giorgi-featured">
           <a href="ioakime.html" class="pantanasa-card">
             <span class="giorgi-text">
