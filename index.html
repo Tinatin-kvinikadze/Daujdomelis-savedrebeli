@@ -70,6 +70,44 @@
         width: 100%;
       }
 
+      .church-calendar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin: -24px 12px 28px;
+        padding: 10px 14px;
+        border: 1px solid rgba(184, 134, 11, 0.28);
+        border-radius: 10px;
+        background: linear-gradient(110deg, #f5f8ef, #fffaf0);
+        color: #36523a;
+        font-size: 0.9em;
+      }
+
+      .church-calendar-date {
+        font-weight: 700;
+      }
+
+      .church-calendar-content {
+        flex: 1 1 280px;
+      }
+
+      .church-calendar-saints {
+        margin-top: 2px;
+        line-height: 1.55;
+      }
+
+      .church-calendar a {
+        color: #246332;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .church-calendar a:hover {
+        text-decoration: underline;
+      }
+
       .prayer-dropdown {
         width: 100%;
         max-width: 100%;
@@ -836,6 +874,8 @@
         <h1>☦ ლოცვანი ☦ </h1>
       </header>
 
+      
+
       <div class="font-controls">
         <button class="font-btn" onclick="adjustFont(-1)" title="შემცირე">
           A−
@@ -843,6 +883,13 @@
         <button class="font-btn" style="margin-right: 10px;" onclick="adjustFont(1)" title="გაადიდე">
           A+
         </button>
+      </div>
+      <div class="church-calendar" style="margin-top:15px">
+        <div class="church-calendar-content">
+          <span><time class="church-calendar-date" id="churchCalendarDate"></time></span>
+          <p class="church-calendar-saints" id="churchCalendarSaints" aria-live="polite">კალენდარი იტვირთება...</p>
+        </div>
+        <a id="churchCalendarLink" href="https://sasoeba.ge/ka" target="_blank" rel="noopener noreferrer"></a>
       </div>
 
       <div class="prayer-links">
@@ -887,6 +934,8 @@
           </div>
         </details>
       </div>
+
+      
 <!-- 
        <div class="giorgi-featured">
         <a href="petre-pavle.html" class="giorgi-card">
@@ -1366,6 +1415,62 @@
 
     <script>
       let counter = 0;
+
+      const calendarDate = new Date();
+      const georgianWeekdays = [
+        "კვირა",
+        "ორშაბათი",
+        "სამშაბათი",
+        "ოთხშაბათი",
+        "ხუთშაბათი",
+        "პარასკევი",
+        "შაბათი",
+      ];
+      const georgianMonths = [
+        "იანვარი",
+        "თებერვალი",
+        "მარტი",
+        "აპრილი",
+        "მაისი",
+        "ივნისი",
+        "ივლისი",
+        "აგვისტო",
+        "სექტემბერი",
+        "ოქტომბერი",
+        "ნოემბერი",
+        "დეკემბერი",
+      ];
+      document.getElementById("churchCalendarDate").textContent =
+        `${georgianWeekdays[calendarDate.getDay()]}, ${calendarDate.getDate()} ${georgianMonths[calendarDate.getMonth()]} ${calendarDate.getFullYear()}`;
+
+      async function loadChurchCalendar() {
+        const year = calendarDate.getFullYear();
+        const month = calendarDate.getMonth() + 1;
+        const day = calendarDate.getDate();
+        const calendarUrl = `https://sasoeba.ge/ka/kalendari/mtskheturi-g-mtatsmindelis/${year}/${month}/${day}`;
+        const saintsElement = document.getElementById("churchCalendarSaints");
+        document.getElementById("churchCalendarLink").href = calendarUrl;
+
+        try {
+          const response = await fetch(calendarUrl);
+          if (!response.ok) throw new Error("Calendar request failed");
+
+          const html = await response.text();
+          const calendarDocument = new DOMParser().parseFromString(html, "text/html");
+          const overview = calendarDocument.getElementById("calendar-day-overview");
+          const readingsHeading = overview?.querySelector("#readings");
+          const saintEntries = [...(overview?.querySelectorAll("p") || [])]
+            .filter((paragraph) => !readingsHeading || (paragraph.compareDocumentPosition(readingsHeading) & Node.DOCUMENT_POSITION_FOLLOWING))
+            .map((paragraph) => paragraph.textContent.trim())
+            .filter(Boolean);
+
+          saintsElement.textContent = saintEntries.join(" ") || "დღის წმინდანების ჩამონათვალი ვერ მოიძებნა.";
+        } catch (error) {
+          saintsElement.textContent = "დღის კალენდრის ჩატვირთვა ვერ მოხერხდა.";
+        }
+      }
+
+      loadChurchCalendar();
 
       function increaseCounter() {
         counter++;
