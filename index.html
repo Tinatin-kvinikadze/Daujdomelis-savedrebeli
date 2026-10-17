@@ -886,7 +886,7 @@
       </div>
       <div class="church-calendar" style="margin-top:15px">
         <div class="church-calendar-content">
-          <span><time class="church-calendar-date" id="churchCalendarDate"></time></span>
+          <span>დღეს, ახალი სტილით: <time class="church-calendar-date" id="churchCalendarDate"></time></span>
           <p class="church-calendar-saints" id="churchCalendarSaints" aria-live="polite">კალენდარი იტვირთება...</p>
         </div>
         <a id="churchCalendarLink" href="https://sasoeba.ge/ka" target="_blank" rel="noopener noreferrer"></a>
@@ -1413,6 +1413,7 @@
       ↑
     </button>
 
+    <script src="church-calendar-data.js"></script>
     <script>
       let counter = 0;
 
@@ -1443,41 +1444,24 @@
       document.getElementById("churchCalendarDate").textContent =
         `${georgianWeekdays[calendarDate.getDay()]}, ${calendarDate.getDate()} ${georgianMonths[calendarDate.getMonth()]} ${calendarDate.getFullYear()}`;
 
-      async function loadChurchCalendar() {
+      function loadChurchCalendar() {
+        const saintsElement = document.getElementById("churchCalendarSaints");
+        const calendarData = window.churchCalendarData;
+        if (!calendarData) {
+          saintsElement.textContent = "დღის კალენდრის მონაცემები ვერ ჩაიტვირთა.";
+          return;
+        }
+
         const year = calendarDate.getFullYear();
         const month = calendarDate.getMonth() + 1;
         const day = calendarDate.getDate();
-        const calendarUrl = `https://sasoeba.ge/ka/kalendari/mtskheturi-g-mtatsmindelis/${year}/${month}/${day}`;
-        const saintsElement = document.getElementById("churchCalendarSaints");
-        document.getElementById("churchCalendarLink").href = calendarUrl;
+        const expectedDate = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+        const dataDate = `${calendarData.date.year}-${String(calendarData.date.month).padStart(2, "0")}-${String(calendarData.date.day).padStart(2, "0")}`;
+        document.getElementById("churchCalendarLink").href = calendarData.url;
 
-        try {
-          let response;
-          for (let attempt = 0; attempt < 3; attempt++) {
-            try {
-              response = await fetch(calendarUrl);
-              if (response.ok) break;
-            } catch (error) {
-              if (attempt === 2) throw error;
-            }
-
-            if (attempt === 2) throw new Error("Calendar request failed");
-            await new Promise((resolve) => setTimeout(resolve, 700 * (attempt + 1)));
-          }
-
-          const html = await response.text();
-          const calendarDocument = new DOMParser().parseFromString(html, "text/html");
-          const overview = calendarDocument.getElementById("calendar-day-overview");
-          const readingsHeading = overview?.querySelector("#readings");
-          const saintEntries = [...(overview?.querySelectorAll("p") || [])]
-            .filter((paragraph) => !readingsHeading || (paragraph.compareDocumentPosition(readingsHeading) & Node.DOCUMENT_POSITION_FOLLOWING))
-            .map((paragraph) => paragraph.textContent.trim())
-            .filter(Boolean);
-
-          saintsElement.textContent = saintEntries.join(" ") || "დღის წმინდანების ჩამონათვალი ვერ მოიძებნა.";
-        } catch (error) {
-          saintsElement.textContent = "დღის კალენდრის ჩატვირთვა ვერ მოხერხდა.";
-        }
+        saintsElement.textContent = expectedDate === dataDate
+          ? calendarData.saints
+          : "დღის კალენდრის მონაცემები ჯერ არ განახლებულა.";
       }
 
       loadChurchCalendar();
