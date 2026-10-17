@@ -1452,8 +1452,18 @@
         document.getElementById("churchCalendarLink").href = calendarUrl;
 
         try {
-          const response = await fetch(calendarUrl);
-          if (!response.ok) throw new Error("Calendar request failed");
+          let response;
+          for (let attempt = 0; attempt < 3; attempt++) {
+            try {
+              response = await fetch(calendarUrl);
+              if (response.ok) break;
+            } catch (error) {
+              if (attempt === 2) throw error;
+            }
+
+            if (attempt === 2) throw new Error("Calendar request failed");
+            await new Promise((resolve) => setTimeout(resolve, 700 * (attempt + 1)));
+          }
 
           const html = await response.text();
           const calendarDocument = new DOMParser().parseFromString(html, "text/html");
