@@ -98,6 +98,34 @@
         line-height: 1.55;
       }
 
+      .church-calendar-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .church-calendar-nav button {
+        width: 36px;
+        height: 34px;
+        border: 1px solid rgba(36, 99, 50, 0.25);
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.75);
+        color: #246332;
+        font: inherit;
+        font-size: 1.2em;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .church-calendar-nav button:hover:not(:disabled) {
+        background: #e8f5e9;
+      }
+
+      .church-calendar-nav button:disabled {
+        opacity: 0.45;
+        cursor: default;
+      }
+
       .church-calendar a {
         color: #246332;
         font-weight: 700;
@@ -889,7 +917,11 @@
           <span><time class="church-calendar-date" id="churchCalendarDate"></time></span>
           <p class="church-calendar-saints" id="churchCalendarSaints" aria-live="polite">კალენდარი იტვირთება...</p>
         </div>
-        <a id="churchCalendarLink" href="https://sasoeba.ge/ka" target="_blank" rel="noopener noreferrer"></a>
+        <div class="church-calendar-nav" aria-label="კალენდრის დღეები">
+          <button id="churchCalendarPrevious" type="button" onclick="showChurchCalendarDay(-1)" aria-label="წინა დღეზე დაბრუნება" title="წინა დღე" disabled>‹</button>
+          <button id="churchCalendarNext" type="button" onclick="showChurchCalendarDay(1)" aria-label="შემდეგ დღეზე გადასვლა" title="შემდეგი დღე">›</button>
+          <a id="churchCalendarLink" href="https://sasoeba.ge/ka" target="_blank" rel="noopener noreferrer" aria-label="დღის კალენდარი"></a>
+        </div>
       </div>
 
       <div class="prayer-links">
@@ -1445,27 +1477,60 @@
       document.getElementById("churchCalendarDate").textContent =
         `${georgianWeekdays[calendarDate.getDay()]}, ${calendarDate.getDate()} ${georgianMonths[calendarDate.getMonth()]} ${calendarDate.getFullYear()}`;
 
-      function loadChurchCalendar() {
+      function renderChurchCalendar(calendarData) {
+        const displayDate = new Date(calendarData.date.year, calendarData.date.month - 1, calendarData.date.day);
+        document.getElementById("churchCalendarDate").textContent =
+          `${georgianWeekdays[displayDate.getDay()]}, ${displayDate.getDate()} ${georgianMonths[displayDate.getMonth()]} ${displayDate.getFullYear()}`;
+        document.getElementById("churchCalendarLink").href = calendarData.url;
+        document.getElementById("churchCalendarSaints").textContent = calendarData.saints;
+      }
+
+      let nextChurchCalendarDataPromise;
+
+      function loadNextChurchCalendarDay() {
+        if (window.churchCalendarNextData) return Promise.resolve(window.churchCalendarNextData);
+        if (nextChurchCalendarDataPromise) return nextChurchCalendarDataPromise;
+
+        nextChurchCalendarDataPromise = new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src = "church-calendar-next-data.js";
+          script.onload = () => resolve(window.churchCalendarNextData);
+          script.onerror = () => {
+            nextChurchCalendarDataPromise = null;
+            reject(new Error("Next calendar data could not be loaded"));
+          };
+          document.head.appendChild(script);
+        });
+
+        return nextChurchCalendarDataPromise;
+      }
+
+      async function showChurchCalendarDay(offset) {
+        const previousButton = document.getElementById("churchCalendarPrevious");
+        const nextButton = document.getElementById("churchCalendarNext");
         const saintsElement = document.getElementById("churchCalendarSaints");
-        const calendarData = window.churchCalendarData;
-        if (!calendarData) {
-          saintsElement.textContent = "დღის კალენდრის მონაცემები ვერ ჩაიტვირთა.";
+
+        if (offset === 1) {
+          nextButton.disabled = true;
+          try {
+            const nextData = await loadNextChurchCalendarDay();
+            if (!nextData) throw new Error("Next calendar data is empty");
+            renderChurchCalendar(nextData);
+            previousButton.disabled = false;
+          } catch (error) {
+            saintsElement.textContent = "ხვალინდელი კალენდრის ჩატვირთვა ვერ მოხერხდა.";
+          } finally {
+            nextButton.disabled = Boolean(window.churchCalendarNextData);
+          }
           return;
         }
 
-        const year = calendarDate.getFullYear();
-        const month = calendarDate.getMonth() + 1;
-        const day = calendarDate.getDate();
-        const expectedDate = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-        const dataDate = `${calendarData.date.year}-${String(calendarData.date.month).padStart(2, "0")}-${String(calendarData.date.day).padStart(2, "0")}`;
-        document.getElementById("churchCalendarLink").href = calendarData.url;
-
-        saintsElement.textContent = expectedDate === dataDate
-          ? calendarData.saints
-          : "დღის კალენდრის მონაცემები ჯერ არ განახლებულა.";
+        renderChurchCalendar(window.churchCalendarData);
+        previousButton.disabled = true;
+        nextButton.disabled = false;
       }
 
-      loadChurchCalendar();
+      renderChurchCalendar(window.churchCalendarData);
 
       function increaseCounter() {
         counter++;
