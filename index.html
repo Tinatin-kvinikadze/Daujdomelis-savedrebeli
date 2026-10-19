@@ -197,6 +197,30 @@
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
       }
 
+      .prayer-search {
+        width: 100%;
+        height: 38px;
+        margin-top: 8px;
+        padding: 7px 11px;
+        border: 1px solid rgba(184, 134, 11, 0.3);
+        border-radius: 8px;
+        background: #fff;
+        color: #2d3748;
+        font: inherit;
+        font-size: 0.9em;
+      }
+
+      .prayer-search:focus {
+        outline: 2px solid rgba(184, 134, 11, 0.4);
+        outline-offset: 1px;
+      }
+
+      .prayer-search-empty {
+        padding: 10px 12px;
+        color: #718096;
+        font-size: 0.9em;
+      }
+
       .prayer-list a {
         display: block;
         padding: 12px 16px;
@@ -948,6 +972,13 @@
       <div class="prayer-links" style="margin-top: -25px;">
         <details class="prayer-dropdown">
           <summary>სხვა დაუჯდომელნი</summary>
+          <input
+            class="prayer-search"
+            type="search"
+            placeholder="მოძებნეთ დაუჯდომელი..."
+            aria-label="სხვა დაუჯდომელთა ძიება"
+            oninput="filterOtherPrayers(this)"
+          />
           <div class="prayer-list prayer-list-alt">
             <a href="pantanasa.html">ყოვლადწმიდა ღვთისმშობლისა (პანტანასას)</a>
             <a href="toma.html">წმიდისა მოციქულისა თომასი</a>
@@ -964,60 +995,11 @@
             <a href="tamari.html">წმიდა კეთილმსახური მეფისა თამარისა</a>
             <a href="petre-pavle.html">წმიდათა მოციქულთა პეტრესი და პავლესი</a>
             <a href="ioakime.html">წმ. იოაკიმე და ანასი</a>
+            <p class="prayer-search-empty" hidden>შედეგი ვერ მოიძებნა</p>
           </div>
         </details>
       </div>
-
-      
-<!-- 
-       <div class="giorgi-featured">
-        <a href="petre-pavle.html" class="giorgi-card">
-          <span class="giorgi-text">
-            <span class="giorgi-title">წმიდა პეტრე და პავლეს</span>
-            <span class="giorgi-sub">დაუჯდომელი</span>
-          </span>
-          <span class="giorgi-arrow">›</span>
-        </a>
-      </div>  -->
-       <!-- <div class="giorgi-featured">
-        <a href="pantanasa.html" class="pantanasa-card">
-          <span class="giorgi-text">
-            <span class="giorgi-title">ყოვლადწმიდა ღვთისმშობლის(პანტანასას)</span>
-            <span class="giorgi-sub">დაუჯდომელი</span>
-          </span>
-          <span class="giorgi-arrow">›</span>
-        </a>
-      <div class="giorgi-featured">
-        <a href="natlismcemeli.html" class="pantanasa-card">
-          <span class="giorgi-text">
-            <span class="giorgi-title">წმ. იოანეს</span>
-            <span class="giorgi-sub">დაუჯდომელი</span>
-          </span>
-          <span class="giorgi-arrow">›</span>
-        </a> -->
-        <!-- <div class="giorgi-featured">
-          <a href="ioakime.html" class="pantanasa-card">
-            <span class="giorgi-text">
-              <span class="giorgi-title">წმ. იოაკიმე და ანასი</span>
-              <span class="giorgi-sub">დაუჯდომელი</span>
-            </span>
-            <span class="giorgi-arrow">›</span>
-          </a> -->
-
-        <!-- <a href="natlismcemeli.html" class="natlismcemeli-card">
-          <span class="giorgi-text">
-            <span class="giorgi-title">წმ.იოანე ნათლისმცემლის</span>
-            <span class="giorgi-sub">დაუჯდომელი</span>
-          </span>
-          <span class="giorgi-arrow">›</span>
-        </a> -->
       </div> 
-
-       <!-- <div class="prayer-links" style="margin-top: -25px;">
-        <a href="itire.html" class="prayer-list" style="font-size: 1.1em; padding: 16px 20px; font-weight: bold; width: 100%; box-sizing: border-box; text-align: center; display: block; text-decoration: none; color: #2d3748;">იტირე სულო</a>
-      </div> -->
-
-
       <div class="section">
         <h2>სავედრებელი ლოცვა</h2>
         <div class="prayer-text">
@@ -1557,6 +1539,21 @@
         if (url) {
           window.location.href = url;
         }
+      }
+
+      function filterOtherPrayers(input) {
+        const prayerList = input.nextElementSibling;
+        const query = input.value.trim().toLocaleLowerCase();
+        const prayerLinks = prayerList.querySelectorAll("a");
+        let visibleCount = 0;
+
+        prayerLinks.forEach((link) => {
+          const matches = link.textContent.toLocaleLowerCase().includes(query);
+          link.hidden = !matches;
+          if (matches) visibleCount++;
+        });
+
+        prayerList.querySelector(".prayer-search-empty").hidden = visibleCount > 0;
       }
 
       // Scroll to top functionality
