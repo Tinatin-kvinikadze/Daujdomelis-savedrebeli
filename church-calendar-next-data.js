@@ -1,9 +1,9 @@
 window.churchCalendarNextData = {
   "date": {
     "year": 2026,
-    "month": 10,
-    "day": 31
+    "month": 11,
+    "day": 1
   },
-  "saints": "მოწამისა მარინისა (IV); ღირსისა იულიანესი (IV).",
-  "url": "https://sasoeba.ge/ka/kalendari/mtskheturi-g-mtatsmindelis/2026/10/31"
+  "saints": "წინასწარმეტყველისა იოელისა (800 წ. ქრისტეს შობამდე); მოწამისა უარისა და მისთანა შვიდთა ქრისტიანთა მასწავლებელთა (დაახ. 307); ნეტარისა კლეოპატრასი (327) და ძისა მისისა იოანესი (320); მღვდელმოწამისა სადუკისა, სპარსელი ეპისკოპოსისა, და მისთანა 128 მოწამეთა (342).",
+  "url": "https://sasoeba.ge/ka/kalendari/mtskheturi-g-mtatsmindelis/2026/11/01"
 };
