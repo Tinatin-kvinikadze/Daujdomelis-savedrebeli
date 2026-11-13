@@ -21,7 +21,7 @@
         font-size: var(--page-font-size);
         background: linear-gradient(135deg, #1a472a 0%, #2d5a1e 100%);
         min-height: 100vh;
-        padding: 8px;
+        padding: 12px;
         color: #2d3748;
         line-height: 1.8;
       }
@@ -37,8 +37,8 @@
 
       header {
         text-align: center;
-        margin-bottom: 30px;
-        padding-bottom: 10px;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
         border-bottom: 2px solid #e2e8f0;
       }
 
@@ -70,9 +70,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         padding: 0 12px;
         width: 100%;
+      }
+
+      .prayer-links--secondary {
+        margin-top: -8px;
       }
 
       .church-calendar {
@@ -81,8 +85,8 @@
         align-items: center;
         justify-content: space-between;
         gap: 12px;
-        margin: -24px 12px 28px;
-        padding: 10px 14px;
+        margin: 0 12px 24px;
+        padding: 12px 16px;
         border: 1px solid rgba(184, 134, 11, 0.28);
         border-radius: 10px;
         background: linear-gradient(110deg, #f5f8ef, #fffaf0);
@@ -273,20 +277,30 @@
       .section {
         background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
         border-radius: 15px;
-        padding: 10px;
-        margin-bottom: 20px;
+        padding: 16px;
+        margin-bottom: 24px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .section--psalm {
+        padding-right: 0;
+        padding-left: 0;
       }
 
       .section h2 {
         color: #2d3748;
         font-size: 1.3em;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
+      }
+
+      .section--psalm h2 {
+        padding-right: 16px;
+        padding-left: 16px;
       }
 
       .section h2::before,
@@ -301,6 +315,10 @@
         border-left: 4px solid #b8860b;
         margin-bottom: 20px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .prayer-continuation {
+        margin-top: 12px;
       }
 
       .btn-nexts {
@@ -724,7 +742,7 @@
 
       .psalm-text {
         background: white;
-        padding: 5px;
+        padding: 16px;
         border-radius: 10px;
         border-left: 4px solid #2e7d32;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -771,8 +789,8 @@
 
       footer {
         text-align: center;
-        margin-top: 40px;
-        padding-top: 30px;
+        margin-top: 32px;
+        padding-top: 24px;
         border-top: 2px solid #e2e8f0;
         color: #718096;
       }
@@ -905,15 +923,50 @@
 
       @media (max-width: 768px) {
         .container {
-          padding: 2px;
+          padding: 16px;
+          border-radius: 18px;
         }
 
         .prayer-links {
-          padding: 0 8px;
+          padding: 0;
+          margin-bottom: 16px;
+        }
+
+        .prayer-links--secondary {
+          margin-top: -4px;
         }
 
         h1 {
           font-size: 34px;
+        }
+
+        .church-calendar {
+          margin: 0 0 20px;
+          padding: 12px;
+        }
+
+        .section {
+          padding: 14px;
+          margin-bottom: 18px;
+        }
+
+        .section h2 {
+          margin-bottom: 14px;
+        }
+
+        .prayer-text {
+          padding: 16px;
+          margin-bottom: 16px;
+        }
+
+        .section--psalm {
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        .section--psalm h2 {
+          padding-right: 14px;
+          padding-left: 14px;
         }
 
         .names-list {
@@ -925,6 +978,16 @@
           width: 65px;
           height: 65px;
           line-height: 65px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        body {
+          padding: 8px;
+        }
+
+        .container {
+          padding: 12px;
         }
       }
     </style>
@@ -946,7 +1009,7 @@
           A+
         </button>
       </div>
-      <div class="church-calendar" style="margin-top:15px">
+      <div class="church-calendar">
         <div class="church-calendar-content">
           <span><time class="church-calendar-date" id="churchCalendarDate"></time></span>
           <p class="church-calendar-saints" id="churchCalendarSaints" aria-live="polite">კალენდარი იტვირთება...</p>
@@ -979,7 +1042,7 @@
         </details>
       </div>
 
-      <div class="prayer-links" style="margin-top: -25px;">
+      <div class="prayer-links prayer-links--secondary">
         <details class="prayer-dropdown">
           <summary>სხვა დაუჯდომელნი</summary>
           <input
@@ -1010,7 +1073,6 @@
           </div>
         </details>
       </div>
-      </div> 
       <div class="section">
         <h2>სავედრებელი ლოცვა</h2>
         <div class="prayer-text">
@@ -1324,18 +1386,17 @@
 
         </div>
 
-        <p style="padding: 10px;">
+        <p class="prayer-continuation">
           დიდება მამასა და ძესა და წმიდასა სულსა, აწ და მარადის და უკუნითი
           უკუნისამდე, ამინ.
         </p>
-        <p style="padding: 10px;"><em>უფალო, შეგვიწყალენ (3-ჯერ)</em></p>
-        <p style="padding: 10px;">
+        <p class="prayer-continuation"><em>უფალო, შეგვიწყალენ (3-ჯერ)</em></p>
+        <p class="prayer-continuation">
           უფალო, იესუ ქრისტე, ძეო ღმრთისაო, ლოცვითა ყოვლად წმიდისა დედისა
           შენისათა, ღირსთა და ღმერთშემოსილთა მამათა ჩვენთათა და ყოველთა წმიდათა
           შენთათა, შეგვიწყალენ ჩვენ, ამინ.
         </p>
         </div>
-      </div>
 
       <div class="counter-section">
         <h2 style="font-size: 1.15em; margin-bottom: 10px;"><span class="flower-icon">✦</span> მოწყალებისა კარი განგვიღე<span class="flower-icon">✦</span></h2>
@@ -1356,7 +1417,7 @@
         </div>
       </div>
 
-      <div class="section">
+      <div class="section section--psalm">
         <h2>90-ე ფსალმუნი</h2>
         <div class="psalm-text">
           <p>
