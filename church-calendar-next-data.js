@@ -2,8 +2,8 @@ window.churchCalendarNextData = {
   "date": {
     "year": 2026,
     "month": 11,
-    "day": 28
+    "day": 29
   },
-  "saints": "მოწამეთა: გურისა, სამონისა (299-306) და აბიბოსი - აღმსარებელთა (322); მოწამეთა: ელპიდესი, მარკელისა და ევსტოქისა (361-363); მოწამისა დიმიტრისა (დაახლ. 307); ღირსისა პაისი ველიჩკოვსკისა (1794). შობის მარხვის დასაწყისი.",
-  "url": "https://sasoeba.ge/ka/kalendari/mtskheturi-g-mtatsmindelis/2026/11/28"
+  "saints": "მართლისა ფულბიანესი, წმიდა ნათლისღებით მათესი (I).",
+  "url": "https://sasoeba.ge/ka/kalendari/mtskheturi-g-mtatsmindelis/2026/11/29"
 };
